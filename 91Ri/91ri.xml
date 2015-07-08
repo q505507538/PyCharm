@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>91ri</title>
+        <link>http://www.91ri.org/</link>
+        <atom:link href="http://117.28.237.21:29956/ording/resource/91ri.xml" type="application/rss+xml"
+                   rel="self"></atom:link>
+        <description>2015-06-21</description>
+        <language>zh-CN</language>
+        <lastBuildDate>Sun, 21 Jun 2015 08:10:27 GMT</lastBuildDate>
+        <generator>PyRSS2Gen-1.1.0</generator>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <item>
+            <title>聊一聊chkrookit的误信和误用</title>
+            <link>https://www.91ri.org/13306.html</link>
+            <description>chkrookit以及rkhunter基本上已经成为类unix系统的应急响应中的标配了。大多数处理安全事件基本</description>
+            <comments>https://www.91ri.org/13306.html#comments</comments>
+            <pubDate>Sun, 21 Jun 2015 08:10:27 GMT</pubDate>
+        </item>
+        <item>
+            <title>深度：关于社会工程学攻击的一次探索(上)</title>
+            <link>https://www.91ri.org/13284.html</link>
+            <description>在这篇文章中将讨论社会工程学攻击，很明显，首先遇到的问题就是：“什么是社会工程学”和“这些攻击有那些类型”。当</description>
+            <comments>https://www.91ri.org/13284.html#comments</comments>
+            <pubDate>Sun, 21 Jun 2015 08:10:27 GMT</pubDate>
+        </item>
+        <item>
+            <title>一张图片即可入侵你的电脑</title>
+            <link>https://www.91ri.org/13205.html</link>
+            <description>一张看起来十分正常的可爱猫咪或美女图片，可以把恶意代码隐藏在图片像素中。当你点击这张图片时，计算机便会中招。</description>
+            <comments>https://www.91ri.org/13205.html#comments</comments>
+            <pubDate>Sun, 21 Jun 2015 08:10:27 GMT</pubDate>
+        </item>
+        <item>
+            <title>也聊聊社会工程学</title>
+            <link>https://www.91ri.org/13227.html</link>
+            <description>网络安全中的『社会工程学』,必然会引起热议 它再也不是小众的论题了, 因为事关每个人的安全,互联网时代没有隐私</description>
+            <comments>https://www.91ri.org/13227.html#comments</comments>
+            <pubDate>Sun, 21 Jun 2015 08:10:27 GMT</pubDate>
+        </item>
+        <item>
+            <title>通过旁注渗透拿下F国司法部</title>
+            <link>https://www.91ri.org/13202.html</link>
+            <description>首先看了一下网站，没看出是什么程序写的，也没发现值得深入下手的地方。于是便旁注了，很快，拿到了一个旁站的she</description>
+            <comments>https://www.91ri.org/13202.html#comments</comments>
+            <pubDate>Sun, 21 Jun 2015 08:10:27 GMT</pubDate>
+        </item>
+        <item>
+            <title>《安全参考》HACKCTO-201506-30</title>
+            <link>https://www.91ri.org/13219.html</link>
+            <description>小编的话 《安全参考》2015年06月第30期有如约而至！ 这一期有绝对精彩的实战渗透测试案例，0day代码审</description>
+            <comments>https://www.91ri.org/13219.html#comments</comments>
+            <pubDate>Sun, 21 Jun 2015 08:10:27 GMT</pubDate>
+        </item>
+        <item>
+            <title>北京的“台湾黑客大会”——第二届乌云白帽大会</title>
+            <link>https://www.91ri.org/13195.html</link>
+            <description>2015年7月17日和18日，台湾著名黑客大会 HITCON将来到北京，与著名漏洞平台乌云网（Wooyun.o</description>
+            <comments>https://www.91ri.org/13195.html#comments</comments>
+            <pubDate>Sun, 21 Jun 2015 08:10:27 GMT</pubDate>
+        </item>
+        <item>
+            <title>卡巴斯基被价值5000万的木马黑了？</title>
+            <link>https://www.91ri.org/13185.html</link>
+            <description>这个料很猛啊，知名安全公司卡巴斯基（Kaspersky）通过博客和新闻稿承认，在今年早些时候的安全检查中，一款</description>
+            <comments>https://www.91ri.org/13185.html#comments</comments>
+            <pubDate>Sun, 21 Jun 2015 08:10:27 GMT</pubDate>
+        </item>
+        <item>
+            <title>当Vcenter遇到域（控制某校园网管电脑之后）</title>
+            <link>https://www.91ri.org/13101.html</link>
+            <description>自从上次改卡被约谈之后学校开始大力整治校园网。今天上学校虚拟机看看结果被提示当前计算机被另一个vcenter管</description>
+            <comments>https://www.91ri.org/13101.html#comments</comments>
+            <pubDate>Sun, 21 Jun 2015 08:10:27 GMT</pubDate>
+        </item>
+        <item>
+            <title>openresty+lua在反向代理服务中的玩法</title>
+            <link>https://www.91ri.org/13079.html</link>
+            <description>0x01 起因 几天前学弟给我介绍他用nginx搭建的反代，代理了谷歌和维基百科。 由此我想到了一些邪恶的东西</description>
+            <comments>https://www.91ri.org/13079.html#comments</comments>
+            <pubDate>Sun, 21 Jun 2015 08:10:27 GMT</pubDate>
+        </item>
+        <item>
+            <title>Hacking PostgreSQL</title>
+            <link>https://www.91ri.org/13070.html</link>
+            <description>这篇文章主要讲解了如何 Hacking PostgreSQL 数据库，总结了一些常用方法。 0x01 SQL</description>
+            <comments>https://www.91ri.org/13070.html#comments</comments>
+            <pubDate>Sun, 21 Jun 2015 08:10:27 GMT</pubDate>
+        </item>
+        <item>
+            <title>Python识别网站验证码</title>
+            <link>https://www.91ri.org/13043.html</link>
+            <description>验证码识别涉及很多方面的内容。入手难度大,但是入手后,可拓展性又非常广泛,可玩性极强,成就感也很足。 验证码图</description>
+            <comments>https://www.91ri.org/13043.html#comments</comments>
+            <pubDate>Sun, 21 Jun 2015 08:10:27 GMT</pubDate>
+        </item>
+        <item>
+            <title>badusb之烧鹅如何偷文件</title>
+            <link>https://www.91ri.org/13035.html</link>
+            <description>最近买了个烧鹅，感觉就是个Teensy2++和一个sd读卡器，但是从Teensy官网买。ship过来都不知道什</description>
+            <comments>https://www.91ri.org/13035.html#comments</comments>
+            <pubDate>Sun, 21 Jun 2015 08:10:27 GMT</pubDate>
+        </item>
+        <item>
+            <title>执行Lua脚本的Android恶意程序</title>
+            <link>https://www.91ri.org/13031.html</link>
+            <description>AVL移动安全团队近期发现一种会执行lua脚本的Android恶意程序，该程序会在本地代码创建Lua环境，联网</description>
+            <comments>https://www.91ri.org/13031.html#comments</comments>
+            <pubDate>Sun, 21 Jun 2015 08:10:27 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

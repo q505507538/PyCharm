@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>OSChina</title><link>http://my.oschina.net</link><description>2015-06-18</description><pubDate>Thu, 18 Jun 2015 15:41:28 GMT</pubDate><lastBuildDate>Thu, 18 Jun 2015 15:41:28 GMT</lastBuildDate><generator>PyRSS2Gen-1.1.0</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Html5练习 -  易水寒521的个人空间 - 开源中国社区</title><link>http://my.oschina.net/u/1994482/blog/468379</link><description>&lt;div class="BlogContent"&gt;&lt;p&gt;&lt;span style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); FONT: medium Simsun; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"&gt;header标签,&lt;span style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); FONT: medium Simsun; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"&gt;aside标签&lt;/span&gt;,&lt;span style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); FONT: medium Simsun; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"&gt;footer标签&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;pre class="brush:html;toolbar: true; auto-links: false;"&gt; &amp;lt;!doctype html&amp;gt;     
+&amp;lt;html&amp;gt;     
+&amp;lt;head&amp;gt;     
+&amp;lt;style&amp;gt;     
+/*    
+*{border:1px solid red;height:20px}    
+所有的html5结构标签本质上来说就是一个div标签，只不过有意义    
+*/    
+/*页面头部 header*/    
+header{height:150px;background:#ABCDEF}    
+nav{height:30px;background:#FF9900;margin-top:100px}    
+nav ul li{width:100px;height:30px;float:left;line-height:30px}    
+/*页面中间 div */    
+div{margin-top:10px;height:1100px}    
+section{height:1100px;background:#ABCDEF;width:70%;float:left}    
+article{background:#ff9900;width:500px;margin:0 auto;text-align:center}    
+aside{height:700px;background:#ABCDEF;width:28%;float:right}    
+/*页面底部 footer*/    
+footer{height:100px;background:#ABCDEF;clear:both;margin-top:10px}    
+&amp;lt;/style&amp;gt;     
+&amp;lt;/head&amp;gt;     
+&amp;lt;body&amp;gt;     
+&amp;lt;header&amp;gt;     
+&amp;lt;p&amp;gt;这是一个header标签&amp;lt;/p&amp;gt;     
+&amp;lt;nav&amp;gt;     
+&amp;lt;ul&amp;gt;     
+&amp;lt;li&amp;gt;首页&amp;lt;/li&amp;gt;     
+&amp;lt;li&amp;gt;企业&amp;lt;/li&amp;gt;     
+&amp;lt;li&amp;gt;论坛&amp;lt;/li&amp;gt;     
+&amp;lt;li&amp;gt;商城&amp;lt;/li&amp;gt;     
+&amp;lt;li&amp;gt;社区&amp;lt;/li&amp;gt;     
+&amp;lt;/ul&amp;gt;     
+&amp;lt;/nav&amp;gt;     
+&amp;lt;/header&amp;gt;     
+&amp;lt;div&amp;gt;     
+&amp;lt;section&amp;gt;     
+&amp;lt;p&amp;gt;这是一个section标签&amp;lt;/p&amp;gt;     
+&amp;lt;article&amp;gt;     
+&amp;lt;h2&amp;gt;春晓&amp;lt;/h2&amp;gt;     
+&amp;lt;p&amp;gt;     
+春眠不觉晓，&amp;lt;br/&amp;gt;     
+处处蚊子咬。&amp;lt;br/&amp;gt;     
+打上敌敌畏，&amp;lt;br/&amp;gt;     
+不知死多少。&amp;lt;br/&amp;gt;     
+&amp;lt;/p&amp;gt;     
+&amp;lt;/article&amp;gt;     
+&amp;lt;hr/&amp;gt;     
+&amp;lt;article&amp;gt;     
+&amp;lt;h2&amp;gt;上学歌&amp;lt;/h2&amp;gt;     
+&amp;lt;p&amp;gt;     
+太阳当空照，&amp;lt;br/&amp;gt;     
+花儿对我笑，&amp;lt;br/&amp;gt;     
+小鸟说早早早，&amp;lt;br/&amp;gt;     
+你为什么背上小书包？&amp;lt;br/&amp;gt;     
+&amp;lt;/p&amp;gt;     
+&amp;lt;/article&amp;gt;     
+&amp;lt;hr/&amp;gt;     
+&amp;lt;article&amp;gt;     
+&amp;lt;h2&amp;gt;上学歌&amp;lt;/h2&amp;gt;     
+&amp;lt;p&amp;gt;     
+我要炸学校，&amp;lt;br/&amp;gt;     
+老师不知道，&amp;lt;br/&amp;gt;     
+一拉线，赶快跑，&amp;lt;br/&amp;gt;     
+轰的一声学校炸没了！&amp;lt;br/&amp;gt;     
+&amp;lt;/p&amp;gt;     
+&amp;lt;/article&amp;gt;     
+&amp;lt;hr/&amp;gt;     
+&amp;lt;figure&amp;gt;     
+&amp;lt;figcaption&amp;gt;UFO&amp;lt;/figcaption&amp;gt;     
+&amp;lt;p&amp;gt;不明飞行物 Unknown Flying Object&amp;lt;/p&amp;gt;     
+&amp;lt;/figure&amp;gt;     
+&amp;lt;figure&amp;gt;     
+&amp;lt;dt&amp;gt;DDs&amp;lt;/dt&amp;gt;     
+&amp;lt;dd&amp;gt;大屌丝&amp;lt;/dd&amp;gt;     
+&amp;lt;/figure&amp;gt;     
+&amp;lt;hr/&amp;gt;     
+&amp;lt;dialog&amp;gt;     
+&amp;lt;dt&amp;gt;唐僧：悟空，你又调皮了，为师都告诉你了不要到处乱丢垃圾的。。。&amp;lt;/dt&amp;gt;     
+&amp;lt;dd&amp;gt;悟空：。。。。。。&amp;lt;/dd&amp;gt;     
+&amp;lt;dt&amp;gt;唐僧：砸到花花草草是不对滴&amp;lt;/dt&amp;gt;     
+&amp;lt;dd&amp;gt;悟空：。。。。。。&amp;lt;/dd&amp;gt;     
+&amp;lt;/dialog&amp;gt;     
+&amp;lt;hr/&amp;gt;     
+&amp;lt;menu&amp;gt;     
+&amp;lt;li&amp;gt;点击&amp;lt;/li&amp;gt;     
+&amp;lt;li&amp;gt;右键单击&amp;lt;/li&amp;gt;     
+&amp;lt;/menu&amp;gt;     
+&amp;lt;hr/&amp;gt;     
+&amp;lt;span contextmenu="candan"&amp;gt;右键点击我试试&amp;lt;/span&amp;gt;     
+&amp;lt;menu type="context" id="candan"&amp;gt;     
+&amp;lt;menuitem label="菜单一" onclick="alert('我很寂寞')" icon="http://www.baidu.com/img/bd_logo.png"&amp;gt;&amp;lt;/menuitem&amp;gt;     
+&amp;lt;/menu&amp;gt;     
+&amp;lt;hr/&amp;gt;     
+&amp;lt;meter min="0" max="10" value="5" low="3" high="7"&amp;gt;&amp;lt;/meter&amp;gt;     
+&amp;lt;progress max="100" value="0" id="pro"&amp;gt;&amp;lt;/progress&amp;gt;     
+&amp;lt;script&amp;gt;     
+var pro =document.getElementById{'pro'};    
+setInterval(function(){    
+pro.value+=1;    
+},100);    
+&amp;lt;/script&amp;gt;     
+&amp;lt;hr/&amp;gt;     
+&amp;lt;details&amp;gt;     
+&amp;lt;dt&amp;gt;这是一个问题&amp;lt;/dt&amp;gt;     
+&amp;lt;dd&amp;gt;yes&amp;lt;/dd&amp;gt;     
+&amp;lt;dt&amp;gt;这是一个问题&amp;lt;/dt&amp;gt;     
+&amp;lt;dd&amp;gt;yes&amp;lt;/dd&amp;gt;     
+&amp;lt;dt&amp;gt;这是一个问题&amp;lt;/dt&amp;gt;     
+&amp;lt;dd&amp;gt;yes&amp;lt;/dd&amp;gt;     
+&amp;lt;/details&amp;gt;     
+&amp;lt;hr/&amp;gt;     
+&amp;lt;ruby&amp;gt;夼&amp;lt;rp&amp;gt;(&amp;lt;/rp&amp;gt;&amp;lt;rt&amp;gt;kuang&amp;lt;/rt&amp;gt;&amp;lt;rp&amp;gt;)&amp;lt;/rp&amp;gt;&amp;lt;ruby&amp;gt;     
+&amp;lt;hr/&amp;gt;     
+女人&amp;lt;mark&amp;gt;最喜欢&amp;lt;/mark&amp;gt;做的事情就是逛街。。。。。。    
+&amp;lt;/section&amp;gt;     
+&amp;lt;aside&amp;gt;     
+&amp;lt;p&amp;gt;这是一个aside标签&amp;lt;/p&amp;gt;     
+&amp;lt;hgroup&amp;gt;     
+&amp;lt;h3&amp;gt;女生宿舍为何频频被盗？&amp;lt;/h3&amp;gt;     
+&amp;lt;h3&amp;gt;两百头母猪为何半夜惨死？&amp;lt;/h3&amp;gt;     
+&amp;lt;h3&amp;gt;还是道德沦丧&amp;lt;/h3&amp;gt;     
+&amp;lt;/hgroup&amp;gt;     
+&amp;lt;/aside&amp;gt;     
+&amp;lt;/div&amp;gt;     
+&amp;lt;footer&amp;gt;     
+&amp;lt;p&amp;gt;这是一个footer标签&amp;lt;/p&amp;gt;     
+&amp;lt;hr/&amp;gt;     
+&amp;lt;small&amp;gt;法律条约&amp;lt;/small&amp;gt;     
+&amp;lt;small&amp;gt;联系我们&amp;lt;/small&amp;gt;     
+&amp;lt;small&amp;gt;准备跳转&amp;lt;/small&amp;gt;     
+&amp;lt;/footer&amp;gt;     
+&amp;lt;/body&amp;gt;     
+&amp;lt;/html&amp;gt;&lt;/pre&gt;
+&lt;p&gt;&lt;span style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); FONT: medium Simsun; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"&gt;&lt;span style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); FONT: medium Simsun; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"&gt;&lt;span style="WHITE-SPACE: pre-wrap; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); FONT: medium monospace; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"&gt;太阳系&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;pre class="brush:html;toolbar: true; auto-links: false;"&gt; &amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&amp;gt;     
+&amp;lt;html xmlns="http://www.w3.org/1999/xhtml"&amp;gt;     
+&amp;lt;head&amp;gt;     
+&amp;lt;meta http-equiv="Content-Type" content="text/html; charset=gb2312" /&amp;gt;     
+&amp;lt;title&amp;gt;太阳系&amp;lt;/title&amp;gt;     
+&amp;lt;/head&amp;gt;     
+&amp;lt;body&amp;gt;     
+&amp;lt;canvas id="canvas" width="1000" height="1000" style="background:#000000"&amp;gt;您的浏览器不支持canvas标签！请换一个浏览器&amp;lt;/canvas&amp;gt;     
+&amp;lt;script&amp;gt;     
+//设置2d绘图环境    
+var cxt=document.getElementById('canvas').getContext('2d');    
+//轨道    
+function drawTrack(){    
+for(var i=0;i&amp;lt;8;i++){    
+cxt.beginPath();    
+cxt.arc(500,500,(i+1)*50,0,360,false);    
+cxt.closePath();    
+//设置笔触颜色    
+cxt.strokeStyle="#fff";    
+cxt.stroke();    
+}    
+}    
+drawTrack();    
+//星球    
+function Star(x,y,radius,cycle,sColor,eColor){    
+//画出星球需要那些属性    
+//星球的坐标点    
+this.x=x;    
+this.y=y;    
+//星球的半径    
+this.radius=radius;    
+//公转周期    
+this.cycle=cycle;    
+//星球的颜色（开始色，结束色）    
+this.sColor=sColor;    
+this.eColor=eColor;    
+//新建一个渐变颜色空对象    
+this.color=null;    
+//设置一个计时器    
+this.time=0;    
+this.draw=function(){    
+//保存之前的画布内容    
+cxt.save();    
+//重置0，0坐标点    
+cxt.translate(500,500);    
+//设置旋转角度    
+cxt.rotate(this.time*(360/this.cycle)*Math.PI/180);    
+//画星球    
+cxt.beginPath();    
+cxt.arc(this.x,this.y,this.radius,0,360,false);    
+cxt.closePath();    
+//设置星球的填充颜色    
+//心渐渐变对象    
+this.color=cxt.createRadialGradient(this.x,this.y,0,this.x,this.y,this.radius);    
+//设置渐变效果    
+this.color.addColorStop(0,this.sColor);//渐变开始点和颜色    
+this.color.addColorStop(1,this.eColor);//渐变结束点和颜色    
+cxt.fillStyle=this.color;//将渐变对象复制给填充画笔    
+//填充星球    
+cxt.fill();    
+//恢复之前保存的画布内容    
+cxt.restore();    
+//执行完毕之后时间加1    
+this.time+=1;    
+}    
+}    
+//创建一个太阳对象的构造函数    
+function Sun(){    
+Star.call(this,0,0,20,0,"#f00","#f90");    
+}    
+//创建一个水星的对象构造方法    
+function Mercury(){    
+Star.call(this,0,-50,10,87.70,"#A69697","#5C3E40");    
+}    
+//创建一个金星的对象构造方法    
+function Venus(){    
+Star.call(this,0,-100,10,224.701,"#C4BBAC","#1F1315");    
+}    
+//创建一个地球的对象构造方法    
+function Earth(){    
+Star.call(this,0,-150,10,365.224,"#78D1E8","#050C12");    
+}    
+//创建一个火星的对象构造方法    
+function Mars(){    
+Star.call(this,0,-200,10,686.98,"#CEC986","#76422D");    
+}    
+//创建一个木星的对象构造方法    
+function Jupites(){    
+Star.call(this,0,-250,10,4332.589,"#C0A48E","#322222");    
+}    
+//创建一个土星的对象构造方法    
+function Satum(){    
+Star.call(this,0,-300,10,10759.5,"#F7F9E3","#5C4533");    
+}    
+//创建一个天王星的对象构造方法    
+function Uranus(){    
+Star.call(this,0,-350,10,30799.095,"#A7E1E5","#19243A");    
+}    
+//创建一个海王星的对象构造方法    
+function Neptune(){    
+Star.call(this,0,-400,10,60152,"#0661B2","#1E3B73");    
+}    
+var sun=new Sun();    
+var mercury=new Mercury();    
+var venus=new Venus();    
+var earth=new Earth();    
+var mars=new Mars();    
+var jupites=new Jupites();    
+var satum=new Satum();    
+var uranus=new Uranus();    
+var neptune=new Neptune();    
+function move(){    
+//清除画布    
+cxt.clearRect(0,0,1000,1000);    
+//画出轨道    
+drawTrack();    
+//画出各个星球    
+sun.draw();    
+mercury.draw();    
+venus.draw();    
+earth.draw();    
+mars.draw();    
+jupites.draw();    
+satum.draw();    
+uranus.draw();    
+neptune.draw();    
+}    
+//是各个星球进行运动    
+setInterval(move,10);    
+&amp;lt;/script&amp;gt;     
+&amp;lt;/body&amp;gt;     
+&amp;lt;/html&amp;gt;&lt;/pre&gt;
+&lt;p&gt;&lt;span style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); FONT: medium Simsun; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"&gt;&lt;span style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); FONT: medium Simsun; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"&gt;&lt;span style="WHITE-SPACE: pre-wrap; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); FONT: medium monospace; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"&gt;时钟&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;pre class="brush:html;toolbar: true; auto-links: false;"&gt; &amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&amp;gt;     
+&amp;lt;html xmlns="http://www.w3.org/1999/xhtml"&amp;gt;     
+&amp;lt;head&amp;gt;     
+&amp;lt;meta http-equiv="Content-Type" content="text/html; charset=gb2312" /&amp;gt;     
+&amp;lt;title&amp;gt;时钟&amp;lt;/title&amp;gt;     
+&amp;lt;/head&amp;gt;     
+&amp;lt;body&amp;gt;     
+&amp;lt;canvas id="clock" width="500" height="500"&amp;gt;您的浏览器不支持canvas标签！请换一个浏览器&amp;lt;/canvas&amp;gt;     
+&amp;lt;script&amp;gt;     
+var clock=document.getElementById('clock');    
+var cxt=clock.getContext('2d');    
+function drawClock(){    
+//清除画布    
+cxt.clearRect(0,0,500,500);    
+var now=new Date();    
+var sec=now.getSeconds();    
+var min=now.getMinutes();    
+var hour=now.getHours();    
+//小时必须获取浮点类型（小时+分数转化成的小时）    
+hour=hour+min/60;    
+//问题是时间格式,将24小时的进制转换为12小时的进制    
+hour=hour&amp;gt;12?hour-10:hour;    
+//表盘    
+cxt.lineWidth=10;    
+cxt.strokeStyle="blue";    
+cxt.beginPath();    
+cxt.arc(250,250,200,0,360,false);    
+cxt.closePath();    
+cxt.stroke();    
+//刻度    
+//时刻度    
+for(var i=0;i&amp;lt;12;i++){    
+cxt.save();    
+cxt.lineWidth="7"    
+cxt.strokeStyle="black";    
+//先设置0，0点    
+cxt.translate(250,250);    
+//在设置旋转角度    
+cxt.rotate(i*30*Math.PI/180);//角度*Math.PI/180=弧度;    
+cxt.beginPath();    
+cxt.moveTo(0,-170);    
+cxt.lineTo(0,-190);    
+cxt.stroke();    
+cxt.closePath();    
+cxt.restore();    
+}    
+//分刻度    
+for(var i=0;i&amp;lt;60;i++){    
+cxt.save();    
+cxt.lineWidth="3"    
+cxt.strokeStyle="black";    
+//先设置0，0点    
+cxt.translate(250,250);    
+//在设置旋转角度    
+cxt.rotate(i*6*Math.PI/180);    
+cxt.beginPath();    
+cxt.moveTo(0,-180);    
+cxt.lineTo(0,-190);    
+cxt.stroke();    
+cxt.closePath();    
+cxt.restore();    
+}    
+//时针    
+cxt.save();    
+//设置时针风格    
+cxt.lineWidth=7;    
+cxt.strokeStyle="black"    
+//设置异次元空间的0，0点    
+cxt.translate(250,250);    
+//在设置旋转角度    
+cxt.rotate(hour*30*Math.PI/180);    
+cxt.beginPath();    
+cxt.moveTo(0,-140);    
+cxt.lineTo(0,10);    
+cxt.closePath();    
+cxt.stroke();    
+cxt.restore();    
+//分针    
+cxt.save();    
+//设置分针风格    
+cxt.lineWidth=5;    
+cxt.strokeStyle="black"    
+//设置异次元空间的0，0点    
+cxt.translate(250,250);    
+//在设置旋转角度    
+cxt.rotate(min*6*Math.PI/180);    
+cxt.beginPath();    
+cxt.moveTo(0,-160);    
+cxt.lineTo(0,10);    
+cxt.closePath();    
+cxt.stroke();    
+cxt.restore();    
+//秒针    
+cxt.save();    
+//设置分针风格    
+cxt.lineWidth=3;    
+cxt.strokeStyle="red"    
+//设置异次元空间的0，0点    
+cxt.translate(250,250);    
+//在设置旋转角度    
+cxt.rotate(sec*6*Math.PI/180);    
+cxt.beginPath();    
+cxt.moveTo(0,-180);    
+cxt.lineTo(0,20);    
+cxt.closePath();    
+cxt.stroke();    
+//画出时针、分针和秒针的交叉点    
+cxt.beginPath();    
+cxt.arc(0,0,5,0,360,false);    
+//设置填充样式    
+cxt.fillStyle="gray";    
+cxt.fill();    
+//设置笔触样式(秒针已设置)    
+cxt.stroke();    
+//设置秒针前端的小圆点    
+cxt.beginPath();    
+cxt.arc(0,-150,5,0,360,false);    
+//设置填充样式    
+cxt.fillStyle="gray";    
+cxt.fill();    
+//设置笔触样式(秒针已设置)    
+cxt.stroke();    
+cxt.closePath();    
+cxt.restore();    
+}    
+//使用setInterval（代码，毫秒时间） 让时钟动起来    
+drawClock();    
+setInterval(drawClock,1000);    
+&amp;lt;/script&amp;gt;     
+&amp;lt;/body&amp;gt;     
+&amp;lt;/html&amp;gt;&lt;/pre&gt;
+&lt;p&gt;&lt;span style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); FONT: medium Simsun; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"&gt;&lt;span style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); FONT: medium Simsun; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"&gt;&lt;/span&gt;&lt;/span&gt; &lt;/p&gt;
+&lt;p&gt;&lt;span style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); FONT: medium Simsun; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"&gt;&lt;span style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; COLOR: rgb(0,0,0); FONT: medium Simsun; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px"&gt;&lt;/span&gt;&lt;/span&gt; &lt;/p&gt;&lt;/div&gt;</description><pubDate>2015-06-18 14:53</pubDate></item><item><title> [转]B/S和C/S架构的区别 -  xiaoyu89的个人空间 - 开源中国社区</title><link>http://my.oschina.net/u/2270174/blog/468376</link><description>&lt;div class="BlogContent"&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;B/S结构，即browser/server（浏览器/服务器）结构，是随着Internet的兴起，对C/S结构的一种变化或者改进的结构，在这种结构下，用户界面完全通过WWW浏览器实现，一部分事务逻辑在前端实现，但是主要事务逻辑是在服务器端实现，形成所谓的三层架构（3-tire）.B/S结构，主要利用了不断成熟的www浏览器技术，结合浏览器的多种SCRIPT语言（vbscript、javascript...）和ActiveX技术。是通过浏览器实现了原来原来需要复杂专用软件才能实现了强大功能，并节约了开发成本，是一种全新的软件系统架构技术。随着windows 98/windows 2000将浏览器植入操作系统内部，这种结构更成为当今应用软件的首选体系结构。显示b/s应用程序相对于传统的c/s结构应用程序将是巨大的进步。&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;b/s结构采用星形拓扑结构建立企业内部通信网络或利用internet虚拟专网（VPN）。前台的特点是安全、快捷、准确。后者则具有节省投资，跨地域广的特点。须视企业规模和地理分布确定，企业内部通过防火墙接入internet,在整个网络采用TCP/IP协议。&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;c/s与b/s区别：&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;client/server是建立是局域网的基础上的，browser/server是建立在广域网的基础上的。&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;1.硬件环境不同&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;c/s一般建立在专用的网络上，小范围里的网络环境，局域网之间再通过专门服务器提供连接和数据交换服务。&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;b/s是建立在广域之上的，不必是专门的网络环境，信息自己管理，有比c/s更强的适应范围，一般只要有操作系统和浏览器就行。&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;2.对安全要求不同&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;c/s一般面向固定的客户群，对信息安全的控制能力很强，一般高度机密的信息系统采用c/s结构适宜，可以通过b/s发布部分公开信息。&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;b/s建立在广域网上，对安全控制能力相对弱，面向的是不可知的用户群。&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;3.对程序架构不同&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;c/s程序可以更加注重流程，可以对权限多层次校验，对系统运行速度可以较少考虑，&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;b/s程序对安全及及访问速度的多重考虑，建立在需要更加优化的基础之上，比c/s有更高的要求，b/s结构的程序架构是发展的趋势，从MS的.net和IBM推出的JavaBean构件技术等，使b/s更加成熟。&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;4.软件重用不同&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;C/S程序可以不可避免的整体性考虑，构件的重用性不如在B/S要求下的构件的重用性好，B/S对多重结构，要求构件相对独立的功能，能够相对较好的重用，就如买来的餐桌可以再利用，而不是做在墙上的石头桌子。&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;5.系统维护不同&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;系统维护是软件生存周期中开销大&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;c/s程序由于整体性，必须整体考虑，处理出现的问题以及系统升级，升级难，可能是再做一个全新的系统。&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;b/s构件组成方面构件个别的更换，实现系统的无缝升级，系统维护开销减小到最小，用户从网上可以自己下载安装就可以升级。&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;6.处理问题不同&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;c/s程序可以处理用户面固定，并且在相同区域，安全要求高需求，与操作系统相关，应该都是相同的系统。&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;b/s建立在广域网上，面向不同的用户群，分散地域，这是c/s无法作到的。与操作系统平台关系最小。&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;7.用户接口不同&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;c/s多是建立的windows平台上，表现方法有限，对程序员普遍要求较高。&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;b/s建立在浏览器上，有更加丰富和生动的表现方式与用户交流，并且大部分难度减低，减低开发成本。&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;8.信息流不同&lt;/p&gt;&lt;p style="color: rgb(51, 51, 51); font-family: Arial; font-size: 14px; line-height: 26px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;C/S 程序一般是典型的中央集权的机械式处理, 交互性相对低&lt;br&gt;B/S 信息流向可变化, B-B B-C B-G等信息、流向的变化, 更象交易中心&lt;/br&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/div&gt;</description><pubDate>2015-06-18 14:49</pubDate></item><item><title>svn与eclipse整合 -  chenruibing的个人空间 - 开源中国社区</title><link>http://my.oschina.net/u/2356176/blog/468372</link><description>&lt;div class="BlogContent"&gt;&lt;p&gt;
+&lt;img alt="" src="http://static.oschina.net/uploads/space/2015/0618/143713_YEk4_2356176.png"&gt;
+&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;img alt="" src="http://static.oschina.net/uploads/space/2015/0618/143720_Dboa_2356176.png"&gt;
+&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;img alt="" src="http://static.oschina.net/uploads/space/2015/0618/143727_j34a_2356176.png"&gt;
+&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;img alt="" src="http://static.oschina.net/uploads/space/2015/0618/143838_DoTj_2356176.png"&gt;
+&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;img alt="" src="http://static.oschina.net/uploads/space/2015/0618/143845_gLI4_2356176.png"&gt;
+&lt;/img&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;&lt;p&gt;
+&lt;span style="font-family:宋体;font-size:10.5000pt;"&gt;    检出的项目不是本地上独立的，是和服务器有关联的，项目里面也有一个&lt;span&gt;svn&lt;/span&gt;&lt;span&gt;的隐藏文件，是可以和服务器直接进行操作的，所以如果项目不需要了不要直接&lt;/span&gt;&lt;span&gt;delete&lt;/span&gt;&lt;span&gt;掉，要先和服务器断开连接再&lt;/span&gt;&lt;span&gt;delete&lt;/span&gt;&lt;span&gt;，和服务器的交互操作都在&lt;/span&gt;&lt;span&gt;Team&lt;/span&gt;&lt;span&gt;里面。&lt;/span&gt;&lt;/span&gt;&lt;span style="font-family:宋体;font-size:10.5000pt;"&gt;断开连接其实就是删除掉本地的&lt;span&gt;svn&lt;/span&gt;&lt;span&gt;隐藏文件，这样就不会和服务器关联了。。&lt;/span&gt;&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;/div&gt;</description><pubDate>2015-06-18 14:44</pubDate></item><item><title> ActivityInstrumentationTestCase2代码 -  我要个鱼～～要个鱼～～～～要个鱼～～～～喵 - 开源中国社区</title><link>http://my.oschina.net/CeShiXiaoSongShu/blog/468369</link><description>&lt;div class="BlogContent"&gt;&lt;p&gt;http://code.taobao.org/p/codeSample/src/trunk/ActivityInstrumentationTestCase2/&lt;/p&gt;&lt;/div&gt;</description><pubDate>2015-06-18 14:41</pubDate></item><item><title>jenkins python api与json api不同 -  donhui - 开源中国社区</title><link>http://my.oschina.net/donhui/blog/468365</link><description>&lt;div class="BlogContent"&gt;&lt;p&gt;查看jenkins的python api与json api，感觉两者相差不多，但还是有所区别，所以用BeyondCompare进行对比分析。&lt;/p&gt;&lt;p&gt;1、jenkins base url的api对比&lt;/p&gt;&lt;p&gt;左侧的为：http://server:port/jenkins/api/python?pretty=true&lt;/p&gt;&lt;p&gt;右侧的为：http://server:port/jenkins/api/json?pretty=true&lt;/p&gt;&lt;p&gt;&lt;img src="http://static.oschina.net/uploads/space/2015/0618/143726_XZfm_1588291.png"/&gt;&lt;/p&gt;&lt;p&gt;2、jenkins job的api对比&lt;/p&gt;&lt;p&gt;左侧的为：http://server:port/jenkins/job/JOB_NAME/api/python?pretty=true&lt;/p&gt;&lt;p&gt;右侧的为：http://server:port/jenkins/job/JOB_NAME/api/json?pretty=true&lt;/p&gt;&lt;p&gt;&lt;img src="http://static.oschina.net/uploads/space/2015/0618/143738_xJCO_1588291.png"/&gt;&lt;/p&gt;&lt;p&gt;3、jenkins build的api对比&lt;/p&gt;&lt;p&gt;左侧的为：http://server:port/jenkins/job/JOB_NAME/BUILD_NUMBER/api/python?pretty=true&lt;/p&gt;&lt;p&gt;右侧的为：http://server:port/jenkins/job/JOB_NAME/BUILD_NUMBER/api/json?pretty=true&lt;/p&gt;&lt;p&gt;&lt;img src="http://static.oschina.net/uploads/space/2015/0618/143749_48CX_1588291.png"/&gt;&lt;/p&gt;&lt;p&gt;4、jenkins view的api对比&lt;/p&gt;&lt;p&gt;左侧的为：http://server:port/jenkins/view/VIEW_NAME/api/python?pretty=true&lt;/p&gt;&lt;p&gt;右侧的为：http://server:port/jenkins/view/VIEW_NAME/api/json?pretty=true&lt;/p&gt;&lt;p&gt;&lt;img src="http://static.oschina.net/uploads/space/2015/0618/143800_S8Lu_1588291.png"/&gt;&lt;/p&gt;&lt;p&gt;5、jenkins nodes的api对比&lt;/p&gt;&lt;p&gt;左侧的为：http://server:port/jenkins/computer/api/python?pretty=true&lt;/p&gt;&lt;p&gt;右侧的为：http://server:port/jenkins/computer/api/json?pretty=true&lt;/p&gt;&lt;p&gt;&lt;img src="http://static.oschina.net/uploads/space/2015/0618/143813_08hE_1588291.png"/&gt;&lt;/p&gt;&lt;p&gt;从上述api不同处，可以看出python和json（JavaScript ）语法有两处不同：&lt;/p&gt;&lt;p&gt;* Python的boolean类型的值为：True/False；json的boolean类型的值为：true/false&lt;br/&gt;&lt;/p&gt;&lt;p&gt;* Python的空值为：None；json的空值为：null&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/div&gt;</description><pubDate>2015-06-18 14:38</pubDate></item><item><title>jQuery 如何获取何设置 redio标签的值 -  岸芷汀兰 - 开源中国社区</title><link>http://my.oschina.net/tinglanrmb32/blog/468351</link><description>&lt;div class="BlogContent"&gt;&lt;p&gt; 设置值： &lt;/p&gt;&lt;div class="line number1 index0 alt2"&gt;&lt;code&gt;$(&lt;/code&gt;&lt;code&gt;'input:radio[name="statusRadios"][value="normal"]'&lt;/code&gt;&lt;code&gt;).prop(&lt;/code&gt;&lt;code&gt;'checked'&lt;/code&gt;&lt;code&gt;, &lt;/code&gt;&lt;code&gt;true&lt;/code&gt;&lt;code&gt;);&lt;/code&gt;&lt;/div&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;获取值：&lt;/p&gt;&lt;p&gt;$("input[name='userState']:checked").val();&lt;br/&gt;&lt;/p&gt;&lt;/div&gt;</description><pubDate>2015-06-18 14:25</pubDate></item><item><title>varnish 清除缓存方法 -  mac_zhao的个人页面 - 开源中国社区</title><link>http://my.oschina.net/maczhao/blog/468345</link><description>&lt;div class="BlogContent"&gt;&lt;p&gt;
+varnish 清除缓存方法：
+&lt;/p&gt;
+清除缓存：curl -X "PURGE" -H "Host: dianying.abc.com" &lt;a href="http://115.238.*.*/detail/67104.html" rel="nofollow"&gt;http://115.238.*.*/detail/67104.html&lt;/a&gt;&lt;/div&gt;</description><pubDate>2015-06-18 14:15</pubDate></item><item><title>windows命令行下用netsh实现端口转发(端口映射) -  shezjl的个人空间 - 开源中国社区</title><link>http://my.oschina.net/u/1024573/blog/468336</link><description>&lt;div class="BlogContent"&gt;&lt;p style="border: 0px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; margin-top: 0px; margin-bottom: 1.625em; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(55, 55, 55); line-height: 24.375px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;微软Windows的netsh是一个命令行脚本实用工具。使用netsh工具 ，可以查看或更改本地计算机或远程计算机的网络配置。不仅可以在本地计算机上运行这些命令，而且可以在网络上的远程计算机上运行。&lt;/p&gt;
+&lt;p style="border: 0px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; margin-top: 0px; margin-bottom: 1.625em; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(55, 55, 55); line-height: 24.375px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;可以手动运行Netsh命令，或创建批处理文件或脚本实现过程的自动化。netsh提供了脚本功能，让您在批处理模式下针对指定的计算机，运行一组命令。利用netsh ，可以将配置脚本保存为文本文件，便于存档或用于配置其他的计算机。&lt;/p&gt;
+&lt;p style="border: 0px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; margin-top: 0px; margin-bottom: 1.625em; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(55, 55, 55); line-height: 24.375px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;netsh命令已经推出很长时间，在Windows 2000/XP/2003中均带有Netsh命令。Windows Server 2008只是对netsh的参数项做了些扩展。&lt;/p&gt;
+&lt;p style="border: 0px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; margin-top: 0px; margin-bottom: 1.625em; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(55, 55, 55); line-height: 24.375px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;因为eclipse的RSE不能使用代理，但是连接国外服务器丢包非常严重，在本机开vpn会好点，但是vpn作用是全局的，而且服务端没权限修改配置。于是vpn放到了虚拟机中，然后用privoxy做代理，vpn转http见这篇日志&lt;a href="http://blog.phpdr.net/vpn-to-http.html" rel="nofollow" target="_blank"&gt;VPN转HTTP代理&lt;/a&gt;。&lt;/p&gt;
+&lt;p style="border: 0px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; margin-top: 0px; margin-bottom: 1.625em; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(55, 55, 55); line-height: 24.375px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;&lt;span style="border: 0px; font-family: inherit; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"&gt;&lt;/span&gt;RSE不能用代理没关系，用端口转发一样可以走虚拟机的VPN线路。虚拟机用的XP，打开cmd：&lt;/p&gt;
+&lt;p style="border: 0px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; margin-top: 0px; margin-bottom: 1.625em; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(55, 55, 55); line-height: 24.375px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;首先安装IPV6（xp下IPV6必须安装，否则端口转发不可用！）&lt;/p&gt;
+&lt;pre&gt;netsh interface ipv6 install&lt;/pre&gt;
+&lt;p style="border: 0px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; margin-top: 0px; margin-bottom: 1.625em; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(55, 55, 55); line-height: 24.375px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;添加一个IPV4到IPV4的端口映射&lt;/p&gt;
+&lt;pre&gt;netsh interface portproxy add v4tov4 listenaddress=192.168.193.1 listenport=22 connectaddress=xxx.xxx.xxx.xxx connectport=22&lt;/pre&gt;
+&lt;p style="border: 0px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; margin-top: 0px; margin-bottom: 1.625em; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(55, 55, 55); line-height: 24.375px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;指定监听ip和端口可以删除&lt;/p&gt;
+&lt;pre&gt;netsh interface portproxy delete v4tov4 listenaddress=192.168.193.1 listenport=22&lt;/pre&gt;
+&lt;p style="border: 0px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; margin-top: 0px; margin-bottom: 1.625em; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(55, 55, 55); line-height: 24.375px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;可以查看存在的转发&lt;/p&gt;
+&lt;pre&gt;netsh interface portproxy show all&lt;/pre&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/div&gt;</description><pubDate>2015-06-18 14:00</pubDate></item><item><title>docker解决crontab无法生效的办法 -  木头的个人空间 - 开源中国社区</title><link>http://my.oschina.net/thmz/blog/468327</link><description>&lt;div class="BlogContent"&gt;&lt;p&gt;在docker中默认使用centos镜像，在该镜像中没有安装crond，通过yum安装成功后，crontab没有生效。&lt;/p&gt;&lt;p&gt;解决办法：&lt;/p&gt;&lt;p&gt;修改/etc/pam.d/crond文件，将其中的required改为sufficient即可。&lt;/p&gt;&lt;/div&gt;</description><pubDate>2015-06-18 13:34</pubDate></item><item><title>程序猿们带着MAC苹果一起高逼格（MindManager  苹果） -  软件达人的个人空间 - 开源中国社区</title><link>http://my.oschina.net/u/2295120/blog/468324</link><description>&lt;div class="BlogContent"&gt;&lt;p&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;MindManager&lt;span style="font-family:宋体"&gt;思维导图软件作为一款影响力最大的可视化思维工具，它的适用范围已经随着版本的不断加强而越来越广，如今&lt;/span&gt;&lt;span style="font-family:Times New Roman"&gt;MindManager&lt;/span&gt;&lt;span style="font-family:宋体"&gt;已经能够在苹果世界混的风生水起，生成了“&lt;/span&gt;&lt;span style="font-family:Times New Roman"&gt;MindManager&lt;/span&gt;&lt;span style="font-family:宋体"&gt;苹果派”。&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;MindManager&lt;/span&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;苹果让&lt;/span&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;你可以组织，管理，以及交流想法和信息来解决问题，推动创新，并且向你的目标持续进展。使用它来创建一个&lt;/span&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;导图&lt;/span&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;，它将从一个中心主题开始，然后为不同分支的想法，记录，图片，任何——甚至超链接和附件。&lt;/span&gt;&lt;/p&gt;&lt;p style="text-align: center;"&gt;&lt;img src="http://static.oschina.net/uploads/space/2015/0618/132121_m6Ux_2295120.jpg"/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=";font-family:宋体;font-weight:bold;font-size:14px"&gt;MindManager&lt;/span&gt;&lt;span style=";font-family:宋体;font-weight:bold;font-size:14px"&gt;苹果&lt;/span&gt;&lt;span style=";font-family:宋体;font-weight:bold;font-size:14px"&gt;主要功能：&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;1.&lt;/span&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;清楚定义你的项目&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;从开始到结束，可视化你的项目的每个方面，包括大图片和小细节。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;通过将所有项目信息和来自人，网站，和文档的想法综合到一张图上来增加透明度和背景。添加记录，地图标记，颜色，和图标。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;2.&lt;/span&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;向着你的目标持续进展&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;将想法转变为行动。&lt;span style="font-family:Times New Roman"&gt;MindManager&lt;/span&gt;&lt;span style="font-family:宋体"&gt;整合了传统&lt;/span&gt;&lt;/span&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;苹果&lt;/span&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;应用程序例如&lt;span style="font-family:Times New Roman"&gt;iCal&lt;/span&gt;&lt;span style="font-family:宋体"&gt;和&lt;/span&gt;&lt;span style="font-family:Times New Roman"&gt;Address Book&lt;/span&gt;&lt;span style="font-family:宋体"&gt;，消除了在生产工具间转换的需求。使用一个工具完成可视化头脑风暴，记录最佳实践，管理项目，将要做的事，会议，等等。&lt;/span&gt;&lt;/span&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;并且可以&lt;/span&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;与任何人共享你的地图，以他们喜爱的文件格式&lt;/span&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;展现&lt;/span&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;3.&lt;/span&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;整合台式机生产软件&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;从&lt;span style="font-family:Times New Roman"&gt;Microsoft Word&lt;/span&gt;&lt;span style="font-family:宋体"&gt;，和&lt;/span&gt;&lt;span style="font-family:Times New Roman"&gt;Apple Pages&lt;/span&gt;&lt;span style="font-family:宋体"&gt;输入，输出到&lt;/span&gt;&lt;span style="font-family:Times New Roman"&gt;Microsoft Word, PowerPoint, Apple iWork Pages, Keynote, OPML, text outline, HTML, JPG, PNG&lt;/span&gt;&lt;span style="font-family:宋体"&gt;或&lt;/span&gt;&lt;span style="font-family:Times New Roman"&gt;TIFF&lt;/span&gt;&lt;span style="font-family:宋体"&gt;格式。&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;4.&lt;/span&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;分享你的地图&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;将你的想法和计划分享到你的整个网络中。&lt;span style="font-family:Times New Roman"&gt;Email&lt;/span&gt;&lt;span style="font-family:宋体"&gt;一个到你地图的链接，张贴在你的博客上或者使用你的&lt;/span&gt;&lt;span style="font-family:Times New Roman"&gt;Facebook&lt;/span&gt;&lt;span style="font-family:宋体"&gt;™&lt;/span&gt;&lt;span style="font-family:Times New Roman"&gt;, LinkedIn, &lt;/span&gt;&lt;span style="font-family:宋体"&gt;或&lt;/span&gt;&lt;span style="font-family:Times New Roman"&gt;Twitter&lt;/span&gt;&lt;span style="font-family:宋体"&gt;™网络分享他。收件人可以在浏览器中查看你的地图，如果你选择的话，他还可以复制地图给自己使用。通过&lt;/span&gt;&lt;span style="font-family:Times New Roman"&gt;Mindjet Player&lt;/span&gt;&lt;span style="font-family:宋体"&gt;，以动态&lt;/span&gt;&lt;span style="font-family:Times New Roman"&gt;Adobe PDF&lt;/span&gt;&lt;span style="font-family:宋体"&gt;或&lt;/span&gt;&lt;span style="font-family:Times New Roman"&gt;Adobe Flash&lt;/span&gt;&lt;span style="font-family:宋体"&gt;格式分享你的地图给每一个人。&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;5.&lt;/span&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;日历集成（&lt;span style="font-family:Times New Roman"&gt;iCal&lt;/span&gt;&lt;span style="font-family:宋体"&gt;或&lt;/span&gt;&lt;span style="font-family:Times New Roman"&gt;Entourage&lt;/span&gt;&lt;span style="font-family:宋体"&gt;）&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;直接创建或从&lt;span style="font-family:Times New Roman"&gt;MindManager&lt;/span&gt;&lt;span style="font-family:宋体"&gt;导入现有的事件到&lt;/span&gt;&lt;span style="font-family:Times New Roman"&gt;to-do&lt;/span&gt;&lt;span style="font-family:宋体"&gt;项。在&lt;/span&gt;&lt;span style="font-family:Times New Roman"&gt;iCal, Entourage, &lt;/span&gt;&lt;span style="font-family:宋体"&gt;或你的地图中发生的任何变化都将保持同步。&lt;/span&gt;&lt;span style="font-family:Times New Roman"&gt;MindManager&lt;/span&gt;&lt;span style="font-family:宋体"&gt;的&lt;/span&gt;&lt;span style="font-family:Times New Roman"&gt;Smart Calendar Topics&lt;/span&gt;&lt;span style="font-family:宋体"&gt;总是提供你的事件或&lt;/span&gt;&lt;span style="font-family:Times New Roman"&gt;to-do&lt;/span&gt;&lt;span style="font-family:宋体"&gt;内容的最新视图。&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;6.&lt;/span&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;内置&lt;span style="font-family:Times New Roman"&gt;Web&lt;/span&gt;&lt;span style="font-family:宋体"&gt;浏览器&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;保持集中。查看网页，搜索结果，或例如&lt;span style="font-family:Times New Roman"&gt;Google&lt;/span&gt;&lt;span style="font-family:宋体"&gt;™ &lt;/span&gt;&lt;span style="font-family:Times New Roman"&gt;Docs&lt;/span&gt;&lt;span style="font-family:宋体"&gt;的应用程序都直接包含在&lt;/span&gt;&lt;span style="font-family:Times New Roman"&gt;MindManager&lt;/span&gt;&lt;span style="font-family:宋体"&gt;中。&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;7.&lt;/span&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;整合&lt;span style="font-family:Times New Roman"&gt;iChat&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;在一个聊天会话中发送或接受地图。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;8.&lt;/span&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;手势和魔术鼠标支持&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;利用&lt;/span&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;苹果&lt;/span&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;触控板上的标准&lt;span style="font-family:Times New Roman"&gt;Apple&lt;/span&gt;&lt;span style="font-family:宋体"&gt;手势的可用性。通过手势，来快速出发操作，例如“捏”，“两根手指挥笔”，“三根手指挥笔”等。&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;而且，&lt;/span&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;MindManager&lt;/span&gt;&lt;span style=";font-family:宋体;font-size:14px"&gt;苹果可是有免费版的哦，怎么样，众多苹果派们是不是已经看得手痒痒了？有空去下载试试吧，绝对不会失望哦。（更多访问：&lt;a href="http://www.mindmanager.cc/" rel="nofollow" target="_blank"&gt;&lt;strong&gt;Mindmanager 苹果&lt;/strong&gt;&lt;/a&gt;  原创文章  转载注明出处 侵权必究）&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;</description><pubDate>2015-06-18 13:24</pubDate></item><item><title>redis安装 -  ikel的个人页面 - 开源中国社区</title><link>http://my.oschina.net/ikel/blog/468322</link><description>&lt;div class="BlogContent"&gt;&lt;p&gt; 1.用ssh把源码拉到linux下，我的版本是Linux version 2.6.18-308 &lt;/p&gt;
+&lt;p&gt; 2. &lt;/p&gt;
+&lt;pre&gt;tar xzf redis-3.0.2.tar.gz&lt;/pre&gt;
+&lt;p&gt; 3.make 32bit &lt;/p&gt;
+&lt;p&gt; 如果报错 &lt;/p&gt;
+&lt;p&gt; &lt;span style="color:#555555;font-family:Verdana, 'BitStream vera Sans', Tahoma, Helvetica, sans-serif;font-size:16px;line-height:24px;background-color:#FFFFFF;"&gt;编辑src/.make-settings里的OPT，改为OPT=-O2 -march=i686&lt;/span&gt; &lt;/p&gt;
+&lt;p&gt; 4. &lt;/p&gt;
+&lt;pre&gt;src/redis-server&lt;/pre&gt; 5. 新起个连接 
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;pre&gt;src/redis-cli&lt;/pre&gt;
+&lt;pre&gt;redis&amp;gt; set foo bar
+OK
+redis&amp;gt; get foo
+"bar"&lt;/pre&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;/div&gt;</description><pubDate>2015-06-18 13:19</pubDate></item><item><title>varnish 4.0 官方文档翻译16-Backend servers/M/B/D/H -  zhuheng123的个人空间 - 开源中国社区</title><link>http://my.oschina.net/monkeyzhu/blog/468314</link><description>&lt;div class="BlogContent"&gt;&lt;h1&gt;Backend servers&lt;/h1&gt;
+&lt;p style="margin-top: 10px; margin-bottom: 15px; padding: 0px; border: 0px;"&gt;varnish有"后端"或者"源"服务器的概念。backend server提供给varnish加速的内容。&lt;/p&gt;
+&lt;p style="margin-top: 15px; margin-bottom: 15px; padding: 0px; border: 0px;"&gt;第一步设置是告诉varnish从哪儿找到backend server。使用你喜欢的编辑器打开varnishd引入的VCL文件。&lt;/p&gt;
+&lt;p style="margin-top: 15px; margin-bottom: 15px; padding: 0px; border: 0px;"&gt;VCL文件的开头有一小段有点像这样：&lt;/p&gt;
+&lt;pre&gt;# backend default {
+#     .host = "127.0.0.1";
+#     .port = "8080";
+# }&lt;/pre&gt;
+&lt;p style="margin-top: 15px; margin-bottom: 15px; padding: 0px; border: 0px;"&gt;去掉注释后&lt;/p&gt;
+&lt;pre&gt;backend default {
+    .host = "127.0.0.1";
+    .port = "8080";
+}&lt;/pre&gt;
+&lt;p style="margin-top: 15px; margin-bottom: 15px; padding: 0px; border: 0px;"&gt;这样一段配置在varnish中定义了一个后端，被叫做default。（和c的函数定义有点相似），当varnish需要从后端获得内容时，它将连接127.0.0.1的8080端口。&lt;/p&gt;
+&lt;p style="margin-top: 15px; margin-bottom: 15px; padding: 0px; border: 0px;"&gt;varnish可以定义多个后端，也可以将几个后端放在一个后端集群里面已达到负载均衡的目的。&lt;/p&gt;
+&lt;h1&gt;Multiple backends&lt;/h1&gt;
+&lt;p style="margin-top: 10px; margin-bottom: 15px; padding: 0px; border: 0px;"&gt;某些情况下你可能需要让varnish缓存多个后端的内容。你可能想让varnish映射所有的url在单个后端上，或者是多个后端。这里有些参数可以满足这样的需求。&lt;/p&gt;
+&lt;p style="margin-top: 15px; margin-bottom: 15px; padding: 0px; border: 0px;"&gt;现在我们需要在PHP站点中引入java应用。java应用的链接都是以/java/开头的。 处理java应用的服务器监听在8000端口上。默认的default.vcl文件这样的：&lt;/p&gt;
+&lt;pre&gt;backend default {
+    .host = "127.0.0.1";
+    .port = "8080";
+}&lt;/pre&gt;
+&lt;p style="margin-top: 15px; margin-bottom: 15px; padding: 0px; border: 0px;"&gt;增加一个后端：&lt;/p&gt;
+&lt;pre&gt;backend java {
+    .host = "127.0.0.1";
+    .port = "8000";
+}&lt;/pre&gt;
+&lt;p style="margin-top: 15px; margin-bottom: 15px; padding: 0px; border: 0px;"&gt;现在需要告诉varnish将不同的url发送到不同的后端server。在vcl_recv中：&lt;/p&gt;
+&lt;pre&gt;sub vcl_recv {
+    if (req.url ~ "^/java/") {
+        set req.backend_hint = java;
+    } else {
+        set req.backend_hint = default;
+    }
+}&lt;/pre&gt;
+&lt;p style="margin-top: 15px; margin-bottom: 15px; padding: 0px; border: 0px;"&gt;真的很简单。停下来思考下。正如你所看到的，你可以定义如何根据真实的任意数据来选择后端。你想发送手机设备的请求到不同的后端？没有问题。 可以满足你的需求。&lt;/p&gt;
+&lt;pre&gt;if (req.http.User-Agent ~ "(?i)MIDP|WAP|UP.Browser|Smartphone|Obigo|Mobile|AU.Browser|wxd.Mms|WxdB.Browser|CLDC|UP.Link|KM.Browser|UCWEB|SEMC\-Browser|Mini|Symbian|Palm|Nokia|Panasonic|MOT|SonyEricsson|NEC|Alcatel|Ericsson|BENQ|BenQ|Amoisonic|Amoi|Capitel|PHILIPS|SAMSUNG|Lenovo|Mitsu|Motorola|SHARP|WAPPER|LG|EG900|CECT|Compal|kejian|Bird|BIRD|G900/V1.0|Arima|CTL|TDG|Daxian|DAXIAN|DBTEL|Eastcom|EASTCOM|PANTECH|Dopod|Haier|HAIER|KONKA|KEJIAN|LENOVO|Soutec|SOUTEC|SAGEM|SEC|SED|EMOL|INNO55|ZTE|iPhone|Android|Windows CE|Wget|Java|Opera") {
+    set req.backend_hint = mobile;
+}&lt;/pre&gt;
+&lt;h1&gt;Backends and virtual hosts in Varnish&lt;/h1&gt;
+&lt;p style="margin-top: 10px; margin-bottom: 15px; padding: 0px; border: 0px;"&gt;varnish完全支持虚拟主机。他们从来没有明确宣布这点是因为varnish以非常规的方式来实现这个功能。在vcl_recv我们设置处理HTTP请求的路由。如果你想让路由基于基本的虚拟主机做点什么，你只需要检查req.http.host便可。&lt;/p&gt;
+&lt;pre&gt;sub vcl_recv {
+    if (req.http.host ~ "foo.com") {
+        set req.backend_hint = foo;
+    } elsif (req.http.host ~ "bar.com") {
+        set req.backend_hint = bar;
+    }
+}&lt;/pre&gt;
+&lt;p style="margin-top: 15px; margin-bottom: 15px; padding: 0px; border: 0px;"&gt;~符号后面的理解为正则表达式。这里可以匹配 "foo.com", "www.foo.com", "zoop.foo.com.cn" 还有其他包含foo.com的域名。该实例是有意写作如此，如果你明确了你的域名，你需要使用==来替代~符号。&lt;/p&gt;
+&lt;pre&gt;sub vcl_recv {
+    if (req.http.host == "foo.com" || req.http.host == "www.foo.com") {
+        set req.backend_hint = foo;
+    }
+}&lt;/pre&gt;
+&lt;h1&gt;Directors&lt;/h1&gt;
+&lt;p style="margin-top: 10px; margin-bottom: 15px; padding: 0px; border: 0px;"&gt;你也可以将几个后端组成一组后端。这个组被叫做Directors。可以提高性能和弹性（增加一台app，或者停用一台app等等）。&lt;/p&gt;
+&lt;p style="margin-top: 15px; margin-bottom: 15px; padding: 0px; border: 0px;"&gt;你可以定义几个后端，然后将他们组织在一个Directors。这些操作需要你载入VMOD（varnish module），然后在vcl_init中调用这个VMOD。&lt;/p&gt;
+&lt;pre&gt;import directors;    # load the directors
+
+backend server1 {
+    .host = "192.168.0.10";
+}
+backend server2 {
+    .host = "192.168.0.10";
+}
+
+sub vcl_init {
+    new bar = directors.round_robin();
+    bar.add_backend(server1);
+    bar.add_backend(server2);
+}
+
+sub vcl_recv {
+    # send all traffic to the bar director:
+    set req.backend_hint = bar.backend();
+}&lt;/pre&gt;
+&lt;p style="margin-top: 15px; margin-bottom: 15px; padding: 0px; border: 0px;"&gt;该调度器是round-robin调度器。这意味着Directors将以轮询的算法来分发请求。还有一个&lt;em&gt;random&lt;/em&gt;分配请求的director，你猜对了，随机的方式。&lt;/p&gt;
+&lt;p style="margin-top: 15px; margin-bottom: 15px; padding: 0px; border: 0px;"&gt;但是如果其中的某个server宕机了呢？varnish能将所有的请求分发到健康的server么？当然！ Health Checks就是干这事的！&lt;/p&gt;
+&lt;h1&gt;Health checks&lt;/h1&gt;
+&lt;p style="margin-top: 10px; margin-bottom: 15px; padding: 0px; border: 0px;"&gt;现在我们给一个调度器设置两个后端和健康检测。先定义后端：&lt;/p&gt;
+&lt;pre&gt;backend server1 {
+    .host = "server1.example.com";
+    .probe = {
+        .url = "/";
+        .timeout = 1s;
+        .interval = 5s;
+        .window = 5;
+        .threshold = 3;
+    }
+}
+
+backend server2 {
+    .host = "server2.example.com";
+    .probe = {
+        .url = "/";
+        .timeout = 1s;
+        .interval = 5s;
+        .window = 5;
+        .threshold = 3;
+    }
+}&lt;/pre&gt;
+&lt;p style="margin-top: 15px; margin-bottom: 15px; padding: 0px; border: 0px;"&gt;.probe是新的参数。在上面的例子中varnish将每5s检测后端，超时设为1s。每个检测将会发送get /的请求。如果5个检测中大于3个是成功，varnish就认为后端是健康的，反之，后端就有问题了。&lt;/p&gt;
+&lt;p style="margin-top: 15px; margin-bottom: 15px; padding: 0px; border: 0px;"&gt;更多.probe的信息可以在varnish中查看&lt;a href="https://www.varnish-cache.org/docs/4.0/reference/vcl.html#reference-vcl-probes" rel="nofollow" target="_blank"&gt;Probes&lt;/a&gt;章节&lt;/p&gt;
+&lt;p style="margin-top: 15px; margin-bottom: 15px; padding: 0px; border: 0px;"&gt;我们现在定义director&lt;/p&gt;
+&lt;pre&gt;import directors;
+
+sub vcl_init {
+    new vdir = directors.round_robin();
+    vdir.add_backend(server1);
+    vdir.add_backend(server2);
+}&lt;/pre&gt;
+&lt;p style="margin-top: 15px; margin-bottom: 15px; padding: 0px; border: 0px;"&gt;你使用&lt;em&gt;vir&lt;/em&gt; director作为处理请求的后端，就像你使用一个简单的后端那样。Varnish不会将请求发送到标记为不健康的后端上。&lt;/p&gt;
+&lt;p style="margin-top: 15px; margin-bottom: 15px; padding: 0px; border: 0px;"&gt;如果所有的后端都宕机了，varnish也可以返回给用户过期了的内容。查看&lt;a href="https://www.varnish-cache.org/docs/4.0/users-guide/vcl-grace.html#users-guide-handling-misbehaving-servers" rel="nofollow" target="_blank"&gt;Misbehaving servers&lt;/a&gt;获得更多如何开启这个功能的信息。&lt;/p&gt;
+&lt;p style="margin-top: 15px; padding: 0px; border: 0px; margin-bottom: 0px !important;"&gt;请注意，varnish将保持健康运行的探针对所有加载VCLs。Varnish将探针合并成似乎完全一体的-因此如果你有很多载入的VCL，不要修改probe的配置，卸载VCL将禁用probes。更多信息请查看ref:reference-vcl-director.&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/div&gt;</description><pubDate>2015-06-18 12:32</pubDate></item><item><title>cgteamwork 观感 -  Hardlighting的个人空间 - 开源中国社区</title><link>http://my.oschina.net/zsjasper/blog/468313</link><description>&lt;div class="BlogContent"&gt;http://cgteamwork.com/T_indexhttp://cgteamwork.com/T_index
+
+了解了一下cgteamwork
+感觉如下：
+
+- 过于专注于文件管理了，包括文件命名，目录结构等，但是做为流程工具，asset 及文件管理可以单独分开，以保证其灵活性，只需要将文件的路径连接给相应的asset即可
+- 对于流程，设置过于复杂，上手麻烦
+- 没有看到review流程
+- 只有初级的统计
+- 配置和设置其实可以放到在线去设置&lt;/div&gt;</description><pubDate>2015-06-18 12:31</pubDate></item><item><title>上班的第五百零九天 -  chrisforbt的个人空间 - 开源中国社区</title><link>http://my.oschina.net/chrisforbt/blog/468308</link><description>&lt;div class="BlogContent"&gt;&lt;p&gt;    这是我职业生涯的第一个通宵，感觉是挺爽的，还好昨天晚上睡饱了，不然今天是无法通宵的。在这个过程中，我发现自己的专注力和思考能力有了很大的提升，似乎潜在的夜猫子能力被激活了。刚刚想好，就动手写了一堆代码，然后一编译，毫无报错，没有bug直接能运行，这感觉太爽了。&lt;/p&gt;
+&lt;p&gt;    似乎自己变得无所不能了。&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;    好吧，刚刚敲完这句话，客户端主程就叫我去找一个野指针，难度似乎有那么点大。&lt;/p&gt;
+&lt;p&gt;    好吧，解决完bug发现我还没有发送这篇日志，那就继续写吧。&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;    挺逗的那个野指针的问题，就是当普通服务器与跨服服务器连接时，先把普通服务器关了，然后再开，跨服服务器重连了普通服务器之后，就发生内存错误了。究其原因，是挺逗的，大概如下。&lt;br/&gt;&lt;/p&gt;
+&lt;pre class="brush:cpp;toolbar: true; auto-links: false;"&gt;void A::Reconnect(void)
+{
+    A* pA = m_b.doSomething(this);
+    ...
+}
+
+A* B::doSomething(A* pA)
+{
+    A* newPA = NULL;
+    if(NULL == pA)
+    {
+        newPA = new A;
+    }
+    else
+    {
+         newPA = pA;
+    }
+    ...
+    std::map&amp;lt;int, A*&amp;gt;it = m_aMap.begin();
+    for(; it != m_aMap.end(); ++ it)
+    {
+        if(it-&amp;gt;first == m_serverId)
+        {
+            A* oldPA = it-&amp;gt;second;
+            delete(oldPA);
+            oldPA = NULL;
+            break;
+        }
+    }
+    
+    return newPA;
+}&lt;/pre&gt;
+&lt;p&gt;    虽然看起来没什么问题，但是特么的在第一个函数中，将“将要释放的普通服务器”传进去了，而且它肯定不为NULL，毕竟之前就已经new出来使用了，所以肯定会走"newPA = pA"这条路线。而下面遍历m_aMap.begin()的时候，找到要释放的服务器，其实就是pA也即是newPA啊，新旧指针都指向同一块内存。那么把旧指针释放了，新指针肯定也被释放了啊！这样就会导致野指针问题。&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;    所以我在delete之前加了个判断，if(oldPA != newPA)才做释放动作，这样就解决问题了。&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;    好了，有点饿了，该去吃个午饭了，不知道下午能不能及时发布呢。&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/div&gt;</description><pubDate>2015-06-18 12:17</pubDate></item><item><title>七种信号表明，你在浪费自己的才华 -  openthings的个人空间 - 开源中国社区</title><link>http://my.oschina.net/u/2306127/blog/468306</link><description>&lt;div class="BlogContent"&gt;&lt;p style=""&gt;我们的客户凯拉（Kyra）在一家历史悠久的专业协会担任财务总监。&lt;br&gt;&lt;br&gt;“我太天真了，”凯拉说，“当财务首席官面试我的时候，他对于我所说的新工具和创意是如此兴奋。该协会一直以来都以最传统的方式做事。”&lt;br/&gt;&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;&lt;p style=""&gt;“在我刚开始工作的时候，我成为了该协会的宠儿。我大约带来了可以产生巨大差异的20项重要创新。我至少一周可以听到老板‘加把劲’的鼓励。”&lt;br/&gt;&lt;/p&gt;&lt;p style=""&gt;“之后，情况发生了改变。首席财务官不愿继续听到我的新想法，即便该协会在其财务运作的很多方面以及该企业的其它领域依然处于黑暗时代。不可思议的是，在过去二十或者三十年，基础设施的改变如此之小。”&lt;/p&gt;&lt;p style=""&gt;“大约在去年圣诞节，我发现，我的老板不再接受新的想法。他希望该重整该协会的系统——但不是按照他向我保证的方式进入一个新的变革时代。我突然被公司列为不受欢迎的人。首席执行官对我感到非常不满。”&lt;/p&gt;&lt;p style=""&gt;“我想，在他聘请我的时候，他认为，我会乐意分享几个创意，并使新的系统运行，之后，我会心甘情愿收敛光芒，并按照该协会传统的方式工作——多么可笑！”&lt;/p&gt;&lt;p style=""&gt;凯拉只在这家协会工作了九个月，但在那九个月里，她却积累了职业生涯中一些最好的简历素材。现在，她必须讲述如何帮助这家协会领导人与时俱进的故事。&lt;/p&gt;&lt;p style=""&gt;&lt;br&gt;凯拉目前供职于一家更具前瞻性的组织。她必须离开——在这家光说不做且墨守成规的组织，她是浪费自己的才华！&lt;/br&gt;&lt;/p&gt;&lt;p style=""&gt;你可能也是在浪费自己的才华。浪费才华是件可怕的事情！令人挫败和灰心的不仅是每天去上班，领导不再重视你的想法和成就，你的创造力遭遇瓶颈和抑制，而且你浪费掉的才华也无助于顾客、股东或者整个世界！&lt;br&gt;&lt;br&gt;&lt;span style="margin: 0px; padding: 0px; max-width: 100%; color: rgb(23, 54, 93); box-sizing: border-box !important; word-wrap: break-word !important;"&gt;&lt;strong&gt;以下这些信号将暗示你，“你需要一个更大的舞台！”&lt;/strong&gt;&lt;/span&gt;&lt;br&gt;&lt;br/&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;&lt;p&gt;1&lt;span style="margin: 0px 0px 0px 0.4em; padding: 0px; max-width: 100%; box-sizing: border-box; display: inline-block; color: rgb(0, 112, 192); line-height: 1.4; font-size: 1em; word-wrap: break-word !important;"&gt;&lt;span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box; font-size: 1em; font-family: inherit; font-weight: bolder; text-align: inherit; text-decoration: inherit; color: rgb(12, 12, 12); word-wrap: break-word !important;"&gt;好想法被视为一种威胁&lt;/span&gt;&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=""&gt;我之前遇到这样一位老板，每当我建议改变工作方式时，无论多么小的改变，他总是长叹一口气。他会说，“把这个想法放入今后计划吧。”&lt;/p&gt;&lt;p style=""&gt;“为什么？”我问他，“我们为什么不可以研究一下这个想法，也许对我们真的有益？”老板叹了口气，走开了。&lt;/p&gt;&lt;p style=""&gt;二十多岁的时候，我不明白这位经理是不愿意去思考。他不愿意更努力的工作。他已经厌倦了自己的工作和职业生涯。他已经失去了思考新鲜事物的激情。在商界，像他这样的人多得很。&lt;/p&gt;&lt;p style=""&gt;他们认为创意会威胁到他们的权力或者那句口头禅“这就是我们一直以来的做事方式”。幸运的是，我已经摆脱了那个家伙。你也可以做同样的事情！&lt;br&gt;&lt;br/&gt;&lt;/br&gt;&lt;/p&gt;&lt;p&gt;2&lt;span style="margin: 0px 0px 0px 0.4em; padding: 0px; max-width: 100%; box-sizing: border-box; display: inline-block; color: rgb(0, 112, 192); line-height: 1.4; font-size: 1em; word-wrap: break-word !important;"&gt;&lt;span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box; font-size: 1em; font-family: inherit; font-weight: bolder; text-align: inherit; text-decoration: inherit; color: rgb(12, 12, 12); word-wrap: break-word !important;"&gt;缺乏目标和计划&lt;/span&gt;&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=""&gt;你会对随处可见的工作感到沮丧，人们正在完成任务和执行进程，仅仅因为他们是一台已经开动的机器的一部分。目标是什么？计划又是什么？&lt;/p&gt;&lt;p style=""&gt;如果你效力于一家组织，但该组织既没有制定宏伟的目标，或者即便有，也没有人会去讨论它，那么干脆把你的简历贴到大街上！如果对未来没有憧憬，那么没有哪一家组织将会取得成功。&lt;/p&gt;&lt;p style=""&gt;在缺少目标的情况下，他们能做的最好的就是停滞不前。这非常适合于一些人——不是你！&lt;br&gt;&lt;br/&gt;&lt;/br&gt;&lt;/p&gt;&lt;p&gt;3&lt;span style="margin: 0px 0px 0px 0.4em; padding: 0px; max-width: 100%; box-sizing: border-box; display: inline-block; color: rgb(0, 112, 192); line-height: 1.4; font-size: 1em; word-wrap: break-word !important;"&gt;&lt;span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box; font-size: 1em; font-family: inherit; font-weight: bolder; text-align: inherit; text-decoration: inherit; color: rgb(12, 12, 12); word-wrap: break-word !important;"&gt;你的雇主不是一名导师&lt;/span&gt;&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=""&gt;因为你年轻气盛，所以非常容易给自己的雇主带来麻烦，即便你不想这样。如果你的雇主害怕制造麻烦或者掀起风波，那么你需要一位更强大的导师！当你谈论工作中的重要问题时，如果你的雇主畏畏缩缩，或者告诉你不要讲话，那么他/她已经不是提拔你的最佳人选了。世界如此之大，有影响力的导师无处不在！另寻他人！&lt;/p&gt;&lt;p&gt;4&lt;span style="margin: 0px 0px 0px 0.4em; padding: 0px; max-width: 100%; box-sizing: border-box; display: inline-block; color: rgb(0, 112, 192); line-height: 1.4; font-size: 1em; word-wrap: break-word !important;"&gt;&lt;span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box; font-size: 1em; font-family: inherit; font-weight: bolder; text-align: inherit; text-decoration: inherit; color: rgb(12, 12, 12); word-wrap: break-word !important;"&gt;看不到自己的未来&lt;/span&gt;&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=""&gt;如果你在一家已然看不到前景的公司上班，那还有什么意义呢？一旦你学会了如何做这份工作，为何要待在这里？如果你无法获得更多的学习机会、更丰富的简历素材和在工作中的个人成长，那么你是在浪费自己的时间和才华。&lt;/p&gt;&lt;p&gt;5&lt;span style="margin: 0px 0px 0px 0.4em; padding: 0px; max-width: 100%; box-sizing: border-box; display: inline-block; color: rgb(0, 112, 192); line-height: 1.4; font-size: 1em; word-wrap: break-word !important;"&gt;&lt;span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box; font-size: 1em; font-family: inherit; font-weight: bolder; text-align: inherit; text-decoration: inherit; color: rgb(12, 12, 12); word-wrap: break-word !important;"&gt;你感到无聊&lt;/span&gt;&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=""&gt;作为职场新人，你或许会对前几份工作感到厌倦，那是因为很多入门级工作非常乏味。一旦你步入25岁，你不应该再对工作感到厌烦。如果这份工作无聊，那么你已经为更伟大且更美好的目标做好了准备！&lt;/p&gt;&lt;p&gt;&lt;span style="margin: 0px; padding: 0px; max-width: 100%; font-size: 16px; box-sizing: border-box !important; word-wrap: break-word !important;"&gt;6&lt;/span&gt;&lt;span style="margin: 0px 0px 0px 0.4em; padding: 0px; max-width: 100%; box-sizing: border-box; display: inline-block; color: rgb(0, 112, 192); line-height: 1.4; font-size: 16px; word-wrap: break-word !important;"&gt;&lt;span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box; font-size: 1em; font-family: inherit; font-weight: bolder; text-align: inherit; text-decoration: inherit; color: rgb(12, 12, 12); word-wrap: break-word !important;"&gt;你是一个不合群的人，因为你喜欢思考&lt;/span&gt;&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p style=""&gt;当你和一群缺乏好奇心的人一起共事时，你开始觉得自己要疯掉了。你会问，“我们为什么要这么做？还有一个更好的方法”，而他们会说，“能有什么不同呢？”和一群不理解你的人共事，你会扑灭自己的热情，失去自尊。&lt;/p&gt;&lt;p style=""&gt;上帝保佑他们，他们不值得获得你的才华。你的任务是寻找一支对新创意感兴趣的更具前瞻性的团队！&lt;br/&gt;&lt;/p&gt;&lt;p style=""&gt;7&lt;span style="margin: 0px 0px 0px 0.4em; padding: 0px; max-width: 100%; box-sizing: border-box; display: inline-block; color: rgb(0, 112, 192); line-height: 1.4; font-size: 1em; word-wrap: break-word !important;"&gt;&lt;span style="margin: 0px; padding: 0px; max-width: 100%; box-sizing: border-box; font-size: 1em; font-family: inherit; font-weight: bolder; text-align: inherit; text-decoration: inherit; color: rgb(12, 12, 12); word-wrap: break-word !important;"&gt;规章制度胜过工作热情&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;如果你在一家公司上班，而该公司的一切都要取决于过时的规章制度，那么你永远不会发掘自己的潜力。我们谈论的年轻人拉杰，就供职于这样的公司。拉杰努力让自己糟糕的境遇有一个合理化的说法，正如我们之中的大多数人已经做过的那样。“并没有那么糟糕，”拉杰说，“我的主管是糟糕透顶，但他将在七年后退休。”&lt;/p&gt;&lt;p&gt;“七年？”我们回答说，“你多大了？”&lt;/p&gt;&lt;p&gt;拉杰说，“我35岁。”&lt;/p&gt;&lt;p&gt;“在你创造工作奇迹之前，你还要等待七年？”我们用一种怀疑的语气问道。拉杰想了想这个问题。&lt;/p&gt;&lt;p&gt;“我可以成立一家公司，和我现在的雇主展开竞争。我可以在七年内击败他们，”他说，“只是我已经适应了自己的工作。”&lt;br&gt;&lt;br&gt;拉杰之所以认为，自己很舒服，是因为他可以拿到一笔丰厚的薪酬。不过，他实际上也是不舒服的：经常做恶梦，害怕周一的早晨。如果是时候离开，身体会向你发出信号！&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/div&gt;</description><pubDate>2015-06-18 12:05</pubDate></item><item><title>MyEclipse移动Web模拟器指南（二） -  Miss_Hello_World的个人空间 - 开源中国社区</title><link>http://my.oschina.net/u/2317468/blog/468299</link><description>&lt;div class="BlogContent"&gt;&lt;p style="box-sizing: border-box; margin-top: 26px; margin-bottom: 26px; font-size: 16px; text-indent: 2em; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei'; line-height: 28px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;在&lt;a href="http://www.evget.com/article/2015/6/10/22391.html" rel="nofollow"&gt;移动Web模拟器指南（一）一文&lt;/a&gt;中，小编为大家介绍了如何启动Web模拟器、如何设置模拟器配置以及如何设置操作系统版本等内容。接下来，我们将介绍有关MyEclipse移动Web模拟器的更多内容，欢迎品鉴！&lt;/p&gt;&lt;h4&gt;&lt;strong&gt;4. 仿真Cordova API&lt;/strong&gt;&lt;/h4&gt;&lt;p style="box-sizing: border-box; margin-top: 26px; margin-bottom: 26px; font-size: 16px; text-indent: 2em; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei'; line-height: 28px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;PhoneGap构建服务使用PhoneGap运行时和API来为您的移动项目创建一个混合应用程序。该运行时包括JavaScript的&lt;em&gt;cordova.js API&lt;/em&gt;，同时还为您提供iOS和Android应用程序。访问&lt;a href="http://cordova.apache.org/" rel="nofollow"&gt;Apache Cordova project&lt;/a&gt;获取更多项目信息和API 文档。&lt;/p&gt;&lt;h5&gt;&lt;strong&gt;4.1 使用加速度传感器进行测试&lt;/strong&gt;&lt;/h5&gt;&lt;p style="box-sizing: border-box; margin-top: 26px; margin-bottom: 26px; font-size: 16px; text-indent: 2em; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei'; line-height: 28px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;加速度传感器测试设备的方向、滚动、俯仰和偏转的移动速度。摇动按钮测试如何摇动设备会影响您的应用程序。使用加速度传感器模拟运动来为使用&lt;a href="http://docs.phonegap.com/en/2.6.0/cordova_accelerometer_accelerometer.md.html#Accelerometer" rel="nofollow"&gt;Accelerometer API&lt;/a&gt;的应用程序提供信息。&lt;/p&gt;&lt;p style="box-sizing: border-box; margin-top: 26px; margin-bottom: 26px; font-size: 16px; text-indent: 2em; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei'; line-height: 28px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;（1）打开Accelerometer面板&lt;/p&gt;&lt;p style="box-sizing: border-box; margin-top: 26px; margin-bottom: 26px; font-size: 16px; text-indent: 2em; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei'; line-height: 28px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;（2）拖动设备的3D图像改变旋转程度，按住Shift键调节alpha轴旋转。如果您的应用程序使用了Accelerometer API来响应设备的这些动作，那么您可以预览这些运动的效果。&lt;/p&gt;&lt;p&gt;&lt;img alt="移动Web模拟器指南（二）" src="http://static.oschina.net/uploads/img/201506/18115416_oKw5.jpg"/&gt;&lt;/p&gt;&lt;p&gt;改变轴的旋转度&lt;/p&gt;&lt;p style="box-sizing: border-box; margin-top: 26px; margin-bottom: 26px; font-size: 16px; text-indent: 2em; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei'; line-height: 28px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;（3）点击Shake来模拟设备摇动。&lt;/p&gt;&lt;h5&gt;&lt;strong&gt;4.2 测试电池电量变化&lt;/strong&gt;&lt;/h5&gt;&lt;p style="box-sizing: border-box; margin-top: 26px; margin-bottom: 26px; font-size: 16px; text-indent: 2em; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei'; line-height: 28px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;通过模拟各种电池的供电状态，您可以测试电池电量对应用程序的影响。当设备插入后，您需要测试不同电量百分比对应用程序的影响。模拟电池电量为使用&lt;a href="http://docs.phonegap.com/en/2.6.0/cordova_events_events.md.html#Events" rel="nofollow"&gt;Events API&lt;/a&gt;的应用程序提供信息。&lt;/p&gt;&lt;p style="box-sizing: border-box; margin-top: 26px; margin-bottom: 26px; font-size: 16px; text-indent: 2em; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei'; line-height: 28px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;（1）打开Power Manger面板，如果您的应用程序使用Events API来响应电池电量的不同阶段，那么模拟下面的应用。&lt;/p&gt;&lt;p style="box-sizing: border-box; margin-top: 26px; margin-bottom: 26px; font-size: 16px; text-indent: 2em; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei'; line-height: 28px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;（2）选择Plugged In复选框来模拟已经插入电源设备，这也就模拟了充电时设备逐渐增加的电量。&lt;/p&gt;&lt;p&gt;&lt;img alt="移动Web模拟器指南（二）" src="http://static.oschina.net/uploads/img/201506/18115417_IwdB.jpg"/&gt;&lt;/p&gt;&lt;p&gt;电池充电仿真&lt;/p&gt;&lt;p style="box-sizing: border-box; margin-top: 26px; margin-bottom: 26px; font-size: 16px; text-indent: 2em; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei'; line-height: 28px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;（3）通过改变电池电量的百分比来测试不同的电池电量。&lt;/p&gt;&lt;p&gt;&lt;img alt="移动Web模拟器指南（二）" src="http://static.oschina.net/uploads/img/201506/18115417_CC3Q.jpg"/&gt;&lt;/p&gt;&lt;p&gt;设置电池电量百分比&lt;/p&gt;&lt;p style="box-sizing: border-box; margin-top: 26px; margin-bottom: 26px; font-size: 16px; text-indent: 2em; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei'; line-height: 28px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;（4）点击Simulate low battery将电池电量设置为0，同时还要设置一个起始比例和增涨速度。&lt;/p&gt;&lt;p&gt;&lt;img alt="移动Web模拟器指南（二）" src="http://static.oschina.net/uploads/img/201506/18115418_B2FX.jpg"/&gt;&lt;/p&gt;&lt;p&gt;配置较低电量模拟&lt;/p&gt;&lt;h5&gt;&lt;strong&gt;4.3 测试地理位置变化&lt;/strong&gt;&lt;/h5&gt;&lt;p style="box-sizing: border-box; margin-top: 26px; margin-bottom: 26px; font-size: 16px; text-indent: 2em; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei'; line-height: 28px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;Geolocation面板允许您测试设备物理位置的变化，包括路径的移动。运动路线的模拟为使用&lt;a href="http://docs.phonegap.com/en/2.6.0/cordova_geolocation_geolocation.md.html#Geolocation" rel="nofollow"&gt;Geolocation API&lt;/a&gt;的应用程序提供地理定位信息。&lt;/p&gt;&lt;p style="box-sizing: border-box; margin-top: 26px; margin-bottom: 26px; font-size: 16px; text-indent: 2em; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei'; line-height: 28px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;（1）打开Geolocation面板。&lt;/p&gt;&lt;p style="box-sizing: border-box; margin-top: 26px; margin-bottom: 26px; font-size: 16px; text-indent: 2em; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei'; line-height: 28px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;（2）使用地图找到您想要标记或输入的坐标位置。&lt;/p&gt;&lt;p style="box-sizing: border-box; margin-top: 26px; margin-bottom: 26px; font-size: 16px; text-indent: 2em; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei'; line-height: 28px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;（3）点击Marker，然后单击在地图上要标记的位置。想要创建一条路线，那么标记路线上的各个点，然后双击地图来完成路线。&lt;/p&gt;&lt;p&gt;&lt;img alt="移动Web模拟器指南（二）" src="http://static.oschina.net/uploads/img/201506/18115418_nkTc.jpg"/&gt;&lt;/p&gt;&lt;p&gt;映射一个地理位置路线&lt;/p&gt;&lt;p style="box-sizing: border-box; margin-top: 26px; margin-bottom: 26px; font-size: 16px; text-indent: 2em; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei'; line-height: 28px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;（4）点击播放绘制路线。如果您的应用程序使用Geolocation API来响应地理定位信息，那么您就可以预览位置变化对应用程序的影响。&lt;/p&gt;&lt;p&gt;&lt;img alt="移动Web模拟器指南（二）" src="http://static.oschina.net/uploads/img/201506/18115418_DMGv.jpg"/&gt;&lt;/p&gt;&lt;p&gt;模拟路线&lt;/p&gt;&lt;h5&gt;&lt;strong&gt;4.4 测试平台事件&lt;/strong&gt;&lt;/h5&gt;&lt;p style="box-sizing: border-box; margin-top: 26px; margin-bottom: 26px; font-size: 16px; text-indent: 2em; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei'; line-height: 28px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;通过模拟平台事件，您可以测试使用 &lt;a href="http://docs.phonegap.com/en/2.6.0/cordova_events_events.md.html#Events" rel="nofollow"&gt;Events API&lt;/a&gt;对应用程序的影响。&lt;/p&gt;&lt;p style="box-sizing: border-box; margin-top: 26px; margin-bottom: 26px; font-size: 16px; text-indent: 2em; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei'; line-height: 28px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;（1）打开Platform Events面板。&lt;/p&gt;&lt;p style="box-sizing: border-box; margin-top: 26px; margin-bottom: 26px; font-size: 16px; text-indent: 2em; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei'; line-height: 28px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;（2）选择一个您想要测试的事件，然后单击Fire Event。&lt;/p&gt;&lt;p&gt;&lt;img alt="移动Web模拟器指南（二）" src="http://static.oschina.net/uploads/img/201506/18115419_BIxY.jpg"/&gt;&lt;/p&gt;&lt;p&gt;平台事件仿真&lt;/p&gt;&lt;h4&gt;&lt;strong&gt;5. 自动重新加载模拟器文件变更&lt;/strong&gt;&lt;/h4&gt;&lt;p style="box-sizing: border-box; margin-top: 26px; margin-bottom: 26px; font-size: 16px; text-indent: 2em; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei'; line-height: 28px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;在开发过程中，模拟器上的更改可同步到您的应用程序中，因此当您离开模拟器之后，也可以打开并测试您的代码。单击工具栏上的Toggle Auto-reload按钮即可与模拟器进行自动同步。&lt;/p&gt;&lt;p&gt;&lt;img alt="移动Web模拟器指南（二）" src="http://static.oschina.net/uploads/img/201506/18115419_fUQ9.jpg"/&gt;&lt;/p&gt;&lt;h4&gt;&lt;strong&gt;6. 调试并检测应用&lt;/strong&gt;&lt;/h4&gt;&lt;p style="box-sizing: border-box; margin-top: 26px; margin-bottom: 26px; font-size: 16px; text-indent: 2em; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei'; line-height: 28px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;移动Web模拟器充分利用了Chrome的开发工具来调试和检测您的应用程序。只需在设备仿真器中右键单击显示屏幕，选择调用检测元素的开发工具即可。&lt;/p&gt;&lt;p style="box-sizing: border-box; margin-top: 26px; margin-bottom: 26px; font-size: 16px; text-indent: 2em; color: rgb(51, 51, 51); font-family: 'Microsoft Yahei'; line-height: 28px; white-space: normal; background-color: rgb(255, 255, 255);"&gt;了解有关Chrome开发工具的更多信息：&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href="https://developers.google.com/chrome-developer-tools/" rel="nofollow"&gt;指南&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href="https://developers.google.com/chrome-developer-tools/docs/videos" rel="nofollow"&gt;视频&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div class="clearfix"&gt;&lt;/div&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/div&gt;</description><pubDate>2015-06-18 11:54</pubDate></item><item><title>PHP 排序算法实现讲解 -  freelife - 开源中国社区</title><link>http://my.oschina.net/freelife/blog/468297</link><description>&lt;div class="BlogContent"&gt;&lt;p&gt;        所谓排序，就是使一串记录，按照其中的某个或某些关键字的大小，递增或递减的排列起来的操作。排序算法，就是如何使得记录按照要求排列的方法。排序算法在很多领域得到相当地重视，尤其是在大量数据的处理方面。一个优秀的算法可以节省大量的资源。在各个领域中考虑到数据的各种限制和规范，要得到一个符合实际的优秀算法，得经过大量的推理和分析。&lt;/p&gt;
+&lt;p&gt;分别使用插入排序法，冒泡排序法，选择排序法，快速排序法，将下面数组中的值进行按照从小到大的顺序进行排序操作。&lt;/p&gt;
+&lt;pre class="brush:php;toolbar:false"&gt;$arr(12,43,57,32,51,76,36,91,28,46,40);&lt;/pre&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;1、插入排序法&lt;/p&gt;
+&lt;p&gt;分析：既定前面数字已经排好顺序，现在要把第n个数字插入到前面有序的数组中，使得这n个数字也是有序的放入其中，如此反复循环直至全部排好顺序。&lt;/p&gt;
+&lt;p&gt;具体代码实现如下：&lt;/p&gt;
+&lt;pre class="brush:php;toolbar:false"&gt;$arr(12,43,57,32,51,76,36,91,28,46,40);
+function insertSort($arr) {
+    $len=count($arr); 
+    for($i=1, $i&amp;lt;$len; $i++) {
+        $tmp = $arr[$i];
+        for($j=$i-1;$j&amp;gt;=0;$j--) {
+            if($tmp &amp;lt; $arr[$j]) {
+                //比较大小当数字小时交换位置，将后面的数字与前面的数字进行互换操作
+                $arr[$j+1] = $arr[$j];
+                $arr[$j] = $tmp;
+            } else {
+                //不需要，直接跳过
+                break;
+            }
+        }
+    }
+    return $arr;
+}&lt;/pre&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;2、冒泡排序法&lt;/p&gt;
+&lt;p&gt;分析：从前往后对相邻的两个数字依次进行比较调整，让较大的数字往下沉，让较小的数字往上升，即每相邻的数字进行对比排序，顺序不符合时将其调换位置。&lt;/p&gt;
+&lt;p&gt;具体代码实现如下：&lt;/p&gt;
+&lt;pre class="brush:php;toolbar:false"&gt;$arr(12,43,57,32,51,76,36,91,28,46,40);
+function bubbleSort($arr)
+{  
+  $len=count($arr);
+  for($i=1;$i&amp;lt;$len;$i++)
+  { //循环比较次数
+    for($k=0;$k&amp;lt;$len-$i;$k++)
+    {
+       if($arr[$k]&amp;gt;$arr[$k+1])
+        {
+            $tmp=$arr[$k+1];
+            $arr[$k+1]=$arr[$k];
+            $arr[$k]=$tmp;
+        }
+    }
+  }
+  return $arr;
+}&lt;/pre&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;3、选择排序法&lt;/p&gt;
+&lt;p&gt;分析：选出最小的一个数字与第一个位置数字交换，之后再剩余的数当中再次找到最小的数字与第二个位置交换，依此循环到倒数第二个数字和最后一个数字比较结束为止。&lt;/p&gt;
+&lt;p&gt;具体代码实现如下：&lt;/p&gt;
+&lt;pre class="brush:php;toolbar:false"&gt;$arr(12,43,57,32,51,76,36,91,28,46,40);
+function selectSort($arr) {
+ $len=count($arr);
+    for($i=0; $i&amp;lt;$len-1; $i++) {
+        //假设最小值的位置
+        $p = $i;
+        for($j=$i+1; $j&amp;lt;$len; $j++) {
+            //$arr[$p] 已知的最小值
+            if($arr[$p] &amp;gt; $arr[$j]) {
+            //比较发现更小的记录下最小值的位置，并且在下次比较时采用已知的最小值进行比较。
+                $p = $j;
+            }
+        }
+        //确定当前最小值的位置，保存到$p中。如果发现最小值的位置与当前假设的位置$i不同，则位置互换即可。
+        if($p != $i) {
+            $tmp = $arr[$p];
+            $arr[$p] = $arr[$i];
+            $arr[$i] = $tmp;
+        }
+    }
+    return $arr;
+}&lt;/pre&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;4、快速排序法&lt;/p&gt;
+&lt;p&gt;分析：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。&lt;/p&gt;
+&lt;p&gt;具体代码实现如下：&lt;/p&gt;
+&lt;pre class="brush:php;toolbar:false"&gt;$arr(12,43,57,32,51,76,36,91,28,46,40);
+function quickSort($arr) {
+    //判断是否继续进行
+    $length = count($arr);
+    if($length &amp;lt;= 1) {
+        return $arr;
+    }
+    //选择第一个数字作为基准
+    $base_num = $arr[0];
+    //遍历除了基准外的所有数字，按照大小关系放入两个数组内，之后初始化两个数组
+    $left_array = array();  //小于基准
+    $right_array = array();  //大于基准
+    for($i=1; $i&amp;lt;$length; $i++) {
+        if($base_num &amp;gt; $arr[$i]) {
+            //放入左边数组
+            $left_array[] = $arr[$i];
+        } else {
+            //放入右边数组
+            $right_array[] = $arr[$i];
+        }
+    }
+    //分别对两数组进行相同的排序处理方式递归
+    $left_array = quick_sort($left_array);
+    $right_array = quick_sort($right_array);
+    //合并数组
+    return array_merge($left_array, array($base_num), $right_array);
+}&lt;/pre&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/div&gt;</description><pubDate>2015-06-18 11:50</pubDate></item><item><title>小菜学设计模式——迭代器模式 -  learn_more的学习笔记 - 开源中国社区</title><link>http://my.oschina.net/heweipo/blog/468294</link><description>&lt;div class="BlogContent"&gt;&lt;br&gt;&lt;h3&gt;&lt;span style="font-size:18px;background-color: inherit;"&gt;背景&lt;/span&gt;&lt;/h3&gt;&lt;p&gt;    迭代就是遍历的一个过程，既然是遍历自然是无处不在，比如说，在大街上看美女的时候，总是一个也不放过，一个个尽收眼底，不过，说实话，夏天看美女，其实我是拒绝的，不说了，鼻血有要留出了&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;h3&gt;&lt;span style="font-family: 微软雅黑; font-size: 14px; line-height: 21px; widows: auto; background-color: rgb(255, 255, 255);"&gt;&lt;span style="font-size:18px;background-color: inherit;"&gt;1、使用意图&lt;/span&gt;&lt;/span&gt;&lt;/h3&gt;&lt;p&gt;    遍历每一个对象&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;h3&gt;&lt;span style="font-family: 微软雅黑; font-size: 14px; line-height: 21px; widows: auto; background-color: rgb(255, 255, 255);"&gt;&lt;span style="font-size:18px;background-color: inherit;"&gt;2、生活实例&lt;/span&gt;&lt;/span&gt;&lt;/h3&gt;&lt;p&gt;    公交车上的售票员查票，对每一个乘客都进行查票，验票。&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;h3&gt;&lt;span style="font-family: 微软雅黑; font-size: 14px; line-height: 21px; widows: auto; background-color: rgb(255, 255, 255);"&gt;&lt;span style="font-size:18px;background-color: inherit;"&gt;3、Java 例子（框架、JDK 、JEE）&lt;/span&gt;&lt;/span&gt;&lt;/h3&gt;&lt;p&gt;&lt;span style="background-color: inherit;"&gt;    &lt;/span&gt;&lt;span style="color:#ff0000;background-color: inherit;"&gt;集合的顶层接口Collection就是实现了接口Iterable，他就是一个迭代器模式的封装，Iterable只有一个方法，Iterator&amp;lt;T&amp;gt; iterator()； &lt;/span&gt;然而Iterator声明了对应迭代的方法，就是如下：&lt;/p&gt;&lt;p&gt;&lt;span style="color:#ff0000;background-color: inherit;"&gt;boolean hasNext();E next();void remove();&lt;/span&gt;&lt;/p&gt;&lt;p&gt;其实，我们不管是使用Map还是List，有时候都会去遍历是删除成员，这个时候迭代器是最好的，因为普通的For是不能在迭代中删除成员的。&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;h3&gt;&lt;span style="font-family: 微软雅黑; font-size: 14px; line-height: 21px; widows: auto; background-color: rgb(255, 255, 255);"&gt;&lt;span style="font-size:18px;background-color: inherit;"&gt;4、模式类图&lt;/span&gt;&lt;/span&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="http://static.oschina.net/uploads/space/2015/0618/113822_fWHy_1989321.png"/&gt;&lt;/p&gt;&lt;p&gt;Aggregate：抽象成员角色，他就是遍历的对象成员&lt;/p&gt;&lt;p&gt;ConcreteAggregate：具体成员角色，对Aggregate的具体实现，其实聚集对象就是集合或说数组&lt;/p&gt;&lt;p&gt;Iterator：抽象迭代器，他声明迭代的工具方法&lt;/p&gt;&lt;p&gt;ConcreteIterator：具体迭代器，他实现迭代的工具方法，可以有各种不同的遍历实现&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;h3&gt;&lt;span style="font-family: 微软雅黑; font-size: 14px; line-height: 21px; widows: auto; background-color: rgb(255, 255, 255);"&gt;&lt;span style="font-size:18px;background-color: inherit;"&gt;5、模式优点&lt;/span&gt;&lt;/span&gt;&lt;/h3&gt;&lt;p&gt;&lt;span style="background-color: inherit;"&gt;  &lt;/span&gt;&lt;span style="color:#ff0000;background-color: inherit;"&gt;  迭代器模式：提供一种方法顺序访问一个聚合对象中各个元素，而又不暴露该对象的内部表示。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;    当需要访问一个聚集对象，而且不管这些对象是什么都需要遍历的时候，就应该考虑使用迭代器模式。&lt;/p&gt;&lt;p&gt;&lt;span style="background-color: inherit;"&gt;   &lt;/span&gt;&lt;span style="color:#ff0000;background-color: inherit;"&gt; 当你需要对聚集对象有多种方式遍历时可以考虑使用迭代器模式。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;    为遍历不同的聚集结构提供如开始、下一个、是否结束、当前哪一项等统一的接口。&lt;/p&gt;&lt;p&gt;    迭代器模式就是分离了集合对象的遍历行为，抽象出一个迭代器类来负责，这样既可以做到不暴露集合内部结构，又可以外部代码透明地访问集合内部数据&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;h3&gt;&lt;span style="font-family: 微软雅黑; font-size: 14px; line-height: 21px; widows: auto; background-color: rgb(255, 255, 255);"&gt;&lt;span style="font-size:18px;background-color: inherit;"&gt;6、与类似模式比较&lt;/span&gt;&lt;/span&gt;&lt;/h3&gt;&lt;p&gt;    看完这个设计模式，感觉到迭代器模式神乎其神了，这个模式确实是无处不在啊，而且Java中for 循环就是一个体现，遍历是多样话的，但是迭代器模式确实就是当中一个原理。&lt;/p&gt;&lt;p&gt;        &lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/br&gt;&lt;/div&gt;</description><pubDate>2015-06-18 11:44</pubDate></item><item><title>[Android] 疯狂捕鱼2_Ver1.5.1内购破解成功版截图分享 -  科技创造的个人页面 - 开源中国社区</title><link>http://my.oschina.net/1590538xiaokai/blog/468291</link><description>&lt;div class="BlogContent"&gt;&lt;p&gt;
+&lt;/p&gt;&lt;p&gt;
+&lt;br&gt;
+游戏截图：&lt;br&gt;
+&lt;img alt="" src="http://static.oschina.net/uploads/img/201506/18114002_bEdU.png" width="512"&gt;
+&lt;/img&gt;&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;
+   &lt;img alt="" src="http://static.oschina.net/uploads/img/201506/18114002_67X6.png" width="512"&gt; &lt;br&gt;
+&lt;br&gt;
+&lt;img alt="" src="http://static.oschina.net/uploads/img/201506/18114002_s8mB.png" width="512"&gt;   &lt;img alt="" src="http://static.oschina.net/uploads/img/201506/18114002_kOpD.png" width="514"&gt; &lt;br&gt;
+&lt;/br&gt;&lt;/img&gt;&lt;/img&gt;&lt;/br&gt;&lt;/br&gt;&lt;/img&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;
+&lt;br&gt;
+游戏简介：&lt;br&gt;
+千分狂鲨，紧绷打炮神经！&lt;br&gt;
+高倍炮得分翻多倍，炮炮满载而归！&lt;br&gt;
+无限炮弹反弹，真正弹无虚发！&lt;br&gt;
+与众不同的高分彩金狂鲨，彩金分值高且还可以依照倍数炮翻倍，彻底紧绷玩家的打炮神经。&lt;br&gt;
+疯狂捕鱼！独特的高分炮，玩家使用20分以上的炮都能够对应翻倍，最高能翻五倍，捕捕HIGH翻天。 &lt;br&gt;
+高倍炮无限反弹，发炮不心疼，安心开炮啦！ 变身黄金装，翻倍更HAPPY 高分鱼种被捕获之后，有一定机率会变身黄金装，黄金鱼的分值将会翻倍，如果搭配50倍炮打下黄金鱼，得分将是原本分值的10倍！
+&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;p&gt;
+参考来源：http://www.52pojie.cn/thread-300528-1-1.html
+&lt;/p&gt;
+&lt;p&gt;
+友情推荐：&lt;a href="http://www.ijiami.cn/newsInfo?id=284&amp;amp;v=3" rel="nofollow" target="_blank"&gt;如何防止工具（八门神器）进行内存修改&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+ 
+&lt;/p&gt;
+&lt;h2&gt;
+&lt;/h2&gt;
+&lt;p&gt;
+ 
+&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;br&gt;
+&lt;/br&gt;&lt;/p&gt;&lt;/hr&gt;&lt;/div&gt;</description><pubDate>2015-06-18 11:40</pubDate></item><item><title>Oracle常用コマンド((命令) -  紫地瓜的个人页面 - 开源中国社区</title><link>http://my.oschina.net/luqin/blog/468283</link><description>&lt;div class="BlogContent"&gt;&lt;p style="color:#484848;font-family:Verdana, sans-serif;font-size:12px;background-color:#FFFFFF;"&gt;
+set head off&lt;br&gt;
+set lin 150&lt;br&gt;
+set pages 0&lt;br&gt;
+set long 10000&lt;br&gt;
+select TEXT from user_source t where t.name = upper('get_car_status_new') order by TYPE, LINE;&lt;br&gt;
+&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;p style="color:#484848;font-family:Verdana, sans-serif;font-size:12px;background-color:#FFFFFF;"&gt;
+=======================
+&lt;/p&gt;
+&lt;p style="color:#484848;font-family:Verdana, sans-serif;font-size:12px;background-color:#FFFFFF;"&gt;
+set pages 0&lt;br&gt;
+set longchunksize 3000&lt;br&gt;
+set long 2000000000&lt;br&gt;
+set head off&lt;br&gt;
+set linesize 1000&lt;br&gt;
+set feedback off&lt;br&gt;
+set trim on&lt;br&gt;
+set trims on&lt;br&gt;
+set echo off&lt;br&gt;
+set term off&lt;br&gt;
+set autotrace on&lt;br&gt;
+set serveroutput on
+&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;p style="color:#484848;font-family:Verdana, sans-serif;font-size:12px;background-color:#FFFFFF;"&gt;
+■ パッケージのソースを表示&lt;br&gt;
+select dbms_metadata.get_ddl('PACKAGE','BSA_PKG','CLARO') from dual;
+&lt;/br&gt;&lt;/p&gt;
+&lt;p style="color:#484848;font-family:Verdana, sans-serif;font-size:12px;background-color:#FFFFFF;"&gt;
+■ トリガーのソースを表示&lt;br&gt;
+select dbms_metadata.get_ddl('TRIGGER','UPDATE_STATUS_BROS_WEB','CLARO') from dual;
+&lt;/br&gt;&lt;/p&gt;
+&lt;p style="color:#484848;font-family:Verdana, sans-serif;font-size:12px;background-color:#FFFFFF;"&gt;
+■ タイプのソースを表示&lt;br&gt;
+select dbms_metadata.get_ddl('TYPE','BSA_PRICE_TYP','CLARO') from dual;
+&lt;/br&gt;&lt;/p&gt;
+&lt;p style="color:#484848;font-family:Verdana, sans-serif;font-size:12px;background-color:#FFFFFF;"&gt;
+■ 関数のソースを表示&lt;br&gt;
+select dbms_metadata.get_ddl('FUNCTION','GET_BIKE_STATUS','CLARO') from dual;
+&lt;/br&gt;&lt;/p&gt;
+&lt;p style="color:#484848;font-family:Verdana, sans-serif;font-size:12px;background-color:#FFFFFF;"&gt;
+■ レビューのソースを表示&lt;br&gt;
+select dbms_metadata.get_ddl('VIEW','BSA_CHECKLIST_VW','BPPROTO') from dual;
+&lt;/br&gt;&lt;/p&gt;
+&lt;p style="color:#484848;font-family:Verdana, sans-serif;font-size:12px;background-color:#FFFFFF;"&gt;
+■ プロシージャーのソースを表示&lt;br&gt;
+select dbms_metadata.get_ddl('PROCEDURE','BSA_PROC_FTP_MGMT','CLARO') from dual;
+&lt;/br&gt;&lt;/p&gt;
+&lt;p style="color:#484848;font-family:Verdana, sans-serif;font-size:12px;background-color:#FFFFFF;"&gt;
+■ シーケンスのソースを表示&lt;br&gt;
+select dbms_metadata.get_ddl('SEQUENCE','SEQ_SHARESTOCK_ID','CLARO') from dual;
+&lt;/br&gt;&lt;/p&gt;
+&lt;p style="color:#484848;font-family:Verdana, sans-serif;font-size:12px;background-color:#FFFFFF;"&gt;
+■ 通し番号のソースを表示&lt;br&gt;
+select dbms_metadata.get_ddl('SYNONYM','BSA_VW_ACS_SUM_DAILY','CLARO') from dual;
+&lt;/br&gt;&lt;/p&gt;
+&lt;p style="color:#484848;font-family:Verdana, sans-serif;font-size:12px;background-color:#FFFFFF;"&gt;
+■ MATERIALIZEDレビューのソースを表示&lt;br&gt;
+select dbms_metadata.get_ddl('MATERIALIZED_VIEW','BSA_BIZ_TOOL_EST_CNT','CLARO_MV') from dual;
+&lt;/br&gt;&lt;/p&gt;
+&lt;p style="color:#484848;font-family:Verdana, sans-serif;font-size:12px;background-color:#FFFFFF;"&gt;
+■ &lt;br&gt;
+SELECT OBJECT_TYPE FROM USER_OBJECTS WHERE OBJECT_NAME=''；
+&lt;/br&gt;&lt;/p&gt;
+&lt;p style="color:#484848;font-family:Verdana, sans-serif;font-size:12px;background-color:#FFFFFF;"&gt;
+■ &lt;br&gt;
+SELECT OWNER AS UNAME,OBJECT_NAME FROM ALL_OBJECTS WHERE OBJECT_TYPE='' AND OWNER LIKE '' ;
+&lt;/br&gt;&lt;/p&gt;
+&lt;p style="color:#484848;font-family:Verdana, sans-serif;font-size:12px;background-color:#FFFFFF;"&gt;
+■ &lt;br&gt;
+SELECT COLUMN_NAME FROM ALL_TAB_COLUMNS WHERE OWNER='' AND DATA_TYPE='' AND TABLE_NAME='';
+&lt;/br&gt;&lt;/p&gt;
+&lt;p style="color:#484848;font-family:Verdana, sans-serif;font-size:12px;background-color:#FFFFFF;"&gt;
+■&lt;br&gt;
+select query from all_mviews where mview_name = upper('BSA_BIZ_TOOL_MASTER');
+&lt;/br&gt;&lt;/p&gt;
+&lt;p style="color:#484848;font-family:Verdana, sans-serif;font-size:12px;background-color:#FFFFFF;"&gt;
+■&lt;br&gt;
+SELECT TABLE_NAME || '|'|| COMMENTS FROM USER_TAB_COMMENTS;
+&lt;/br&gt;&lt;/p&gt;
+&lt;p style="color:#484848;font-family:Verdana, sans-serif;font-size:12px;background-color:#FFFFFF;"&gt;
+■ &lt;br&gt;
+select a.constraint_name||','||a.column_name from user_cons_columns a, user_constraints b where a.constraint_name = b.constraint_name and b.constraint_type = 'P' and a.table_name ='TABLE';
+&lt;/br&gt;&lt;/p&gt;&lt;/div&gt;</description><pubDate>2015-06-18 11:27</pubDate></item></channel></rss>
