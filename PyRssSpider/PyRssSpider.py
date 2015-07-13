@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 import urllib2
 import PyRSS2Gen
-import re, random, datetime, sys, os
+import re, random, datetime, sys, os, ssl
 from bs4 import BeautifulSoup
 
 reload(sys)
@@ -40,31 +40,40 @@ def get_html(url, min):
     :param min: 是否精简源代码
     :return:
     '''
-    if get_host(url):
-        host = get_host(url)
-        random_header = random.choice(my_headers)
-        request = urllib2.Request(url)
-        request.add_header("User-Agent", random_header)
-        request.add_header("Host", host)
-        request.add_header("Referer", "http://baidu.com/")
-        request.add_header("GET", url)
-        content = urllib2.urlopen(request).read()
-        if min:
-            content = content.replace('\t', '').replace('\r\n', '').replace('\n', '').replace('\r', '')
-            content = re.sub(r'>\s*<', '><', content)
-            return content
+    host = get_host(url)
+    random_header = random.choice(my_headers)
+    request = urllib2.Request(url)
+    request.add_header("User-Agent", random_header)
+    request.add_header("Host", host)
+    request.add_header("Referer", "http://baidu.com/")
+    request.add_header("GET", url)
+    if url[0:5] == 'https':
+        ssl._create_default_https_context = ssl._create_unverified_context
+        if get_host(url):
+            content = urllib2.urlopen(request).read()
         else:
-            return content
+            print "获取host" + url + "失败"
+            return -1
     else:
-        print "获取host" + url + "失败"
-        return -1
+        if get_host(url):
+            content = urllib2.urlopen(request).read()
+        else:
+            print "获取host" + url + "失败"
+            return -1
+    if min:
+        content = content.replace('\t', '').replace('\r\n', '').replace('\n', '').replace('\r', '')
+        content = re.sub(r'>\s*<', '><', content)
+        return content
+    else:
+        return content
+
 
 def split(str, beg, end):
     tmp1 = str.split(beg)
-    print len(tmp1)
+    # print len(tmp1)
     if len(tmp1) >= 2:
         tmp2 = tmp1[1].split(end)
-        print len(tmp1)
+        # print len(tmp1)
         if len(tmp2) >= 2:
             return tmp2[0]
     return -1
@@ -119,16 +128,42 @@ class RssSpider():
         if os.path.isfile(self.xmlpath):
             os.remove(self.xmlpath)
 
-    def SaveRssFile(myrss, xmlpath):
-        finallxml = myrss.to_xml(encoding='utf-8')
-        file = open(xmlpath, 'w')
+    def SaveRssFile(self):
+        finallxml = self.myrss.to_xml(encoding='utf-8')
+        file = open(self.xmlpath, 'w')
         file.writelines(finallxml)
         file.close()
 
-    def set_Content(self, beg, end, reg):
-        self.beg = beg
-        self.end = end
-        if reg=='reg':
-            self.reg = True
-        else:
-            self.reg = False
+    def get_content(self, beg, end, reg):
+        self.content=[]
+        for item in self.list:
+            # print len(item)
+            print item[0]+'\n', item[1]+'\n'
+            html = get_html(item[0], False)
+            if html <> -1:
+                if reg:
+                    content = split_re(html, beg, end)
+                else:
+                    content = split(html, beg, end)
+                if content <> -1:
+                    rss = PyRSS2Gen.RSSItem(
+                        title='<![CDATA[' + item[1] + ']]>',
+                        link=item[0],
+                        comments=item[0] + "#comments",
+                        pubDate=datetime.datetime.now(),
+                        description=beg + content + end
+                    )
+                    self.myrss.items.append(rss)
+                else:
+                    print "获取内容失败"
+                    sys.exit(0)
+            else:
+                sys.exit(0)
+        for a in self.content:
+            print a[0]+'\n', a[1]+'\n', a[2]+'\n',
+
+
+    def get_list(self, reg):
+        pageCode = get_html(self.url, False)
+        pattern = re.compile(reg,re.S)
+        self.list = re.findall(pattern, pageCode)
