@@ -94,7 +94,6 @@ class Taobao:
         #引入工具类
         self.tool = Spider5_tool.Tool()
 
-
     #得到是否需要输入验证码，这次请求的相应有时会不同，有时需要验证有时不需要
     def needCheckCode(self):
         #第一次登录获取验证码尝试，构建request
@@ -141,7 +140,6 @@ class Taobao:
             print u"没有找到验证码内容"
             return False
 
-
     #输入验证码，重新请求，如果验证成功，则返回J_HToken
     def loginWithCheckCode(self):
         #提示用户输入验证码
@@ -180,7 +178,6 @@ class Taobao:
         except urllib2.HTTPError, e:
             print u"连接服务器出错，错误原因",e.reason
             return False
-
 
     #通过token获得st
     def getSTbyToken(self,token):
@@ -222,7 +219,6 @@ class Taobao:
             print "登录失败"
             return False
 
-
     #获得已买到的宝贝页面
     def getGoodsPage(self,pageIndex):
         goodsURL = 'http://buyer.trade.taobao.com/trade/itemlist/listBoughtItems.htm?action=itemlist/QueryAction&event_submit_do_query=1' + '&pageNum=' + str(pageIndex)
@@ -236,8 +232,6 @@ class Taobao:
         for x in range(1,int(pageNum)+1):
             page = self.getGoodsPage(x)
             self.tool.getGoodsInfo(page)
-
-
 
     #程序运行主干
     def main(self):
@@ -278,8 +272,6 @@ class Taobao:
             self.getAllGoods(pageNum)
         else:
             print u"登录失败"
-
-
 
 taobao = Taobao()
 taobao.main()

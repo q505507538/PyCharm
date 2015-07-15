@@ -17,5 +17,5 @@ while True:
     while True :
         data = client.recv(BUF_SIZE)  #从客户端接收数据
         print data
-        client.sendall(data)  #发送数据到客户端
+        # client.sendall(data)  #发送数据到客户端
 server.close()

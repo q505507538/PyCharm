@@ -18,8 +18,8 @@ myrss = PyRSS2Gen.RSS2(
 def main():
     rssSpider = RssSpider(myrss, '91ri.xml')
     rssSpider.get_list(r'<div class="right-col">\s+<h1><a href="(.*?)" data-no-turbolink="true" target="_blank" title="(.*?)">')
-    rssSpider.get_content('<article class="single-post">', '</article>', False)
-    rssSpider.SaveRssFile()
+    rssSpider.get_content('<article class="single-post">', '</article>')
+    rssSpider.save_rss_file()
 
 if __name__ == '__main__':
     main()

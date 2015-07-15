@@ -11,6 +11,6 @@ client.connect(server_addr)  #要连接的服务器地址
 while True:
     data = raw_input("Please input some string > ")
     client.sendall(data)  #发送数据到服务器
-    data = client.recv(BUF_SIZE)  #从服务器端接收数据
-    print data
+    # data = client.recv(BUF_SIZE)  #从服务器端接收数据
+    # print data
 client.close()

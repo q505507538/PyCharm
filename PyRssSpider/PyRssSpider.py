@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 import urllib2
 import PyRSS2Gen
-import re, random, datetime, sys, os, ssl
+import re, random, datetime, sys, os, ssl, platform
 from bs4 import BeautifulSoup
 
 reload(sys)
@@ -20,131 +20,114 @@ my_headers = [
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
 ]
 
+
 def get_host(url):
     '''
     通过url获取域名
     :param url: 带获取的url地址
-    :return:
+    :return: host结果
     '''
     proto, rest = urllib2.splittype(url)
     res, rest = urllib2.splithost(rest)
-    if res:
-        return res
+    if res: return res
     else:
-        return None
+        print "获取host" + url + "失败"
+        return -1
+
 
 def get_html(url, min):
     '''
     获取网页源代码函数
     :param url: 待获取的url地址
-    :param min: 是否精简源代码
+    :param min: 是否压缩源代码
     :return:
     '''
-    host = get_host(url)
+    if get_host(url) <> -1: host = get_host(url)
+    else: return -1
+    if (url[0:5] == 'https') and (platform.system() == 'Windows'): ssl._create_default_https_context = ssl._create_unverified_context
     random_header = random.choice(my_headers)
     request = urllib2.Request(url)
     request.add_header("User-Agent", random_header)
     request.add_header("Host", host)
     request.add_header("Referer", "http://baidu.com/")
     request.add_header("GET", url)
-    if url[0:5] == 'https':
-        ssl._create_default_https_context = ssl._create_unverified_context
-        if get_host(url):
-            content = urllib2.urlopen(request).read()
-        else:
-            print "获取host" + url + "失败"
-            return -1
-    else:
-        if get_host(url):
-            content = urllib2.urlopen(request).read()
-        else:
-            print "获取host" + url + "失败"
-            return -1
-    if min:
-        content = content.replace('\t', '').replace('\r\n', '').replace('\n', '').replace('\r', '')
-        content = re.sub(r'>\s*<', '><', content)
-        return content
-    else:
-        return content
+    content = urllib2.urlopen(request).read()
+    if min: content = re.sub(r'>\s*<', '><', content.replace('\t', '').replace('\r\n', '').replace('\n', '').replace('\r', ''))
+    return content
 
 
-def split(str, beg, end):
+def split(str, beg, end, reg=False):
+    '''
+    文本分割函数
+    :param str: 待处理字符串
+    :param beg: 分割开始位置
+    :param end: 分割结束位置
+    :param reg: 是否采用正则表达式
+    :return: 处理结果
+    '''
+    if reg:
+        if re.search(beg, str) and re.search(end, str):
+            str = re.sub(r'([\s\S]*)' + beg, '', str)
+            str = re.sub(end + r'([\s\S]*)', '', str)
+            return str
+        return -1;
     tmp1 = str.split(beg)
-    # print len(tmp1)
     if len(tmp1) >= 2:
         tmp2 = tmp1[1].split(end)
-        # print len(tmp1)
-        if len(tmp2) >= 2:
-            return tmp2[0]
+        if len(tmp2) >= 1: return tmp2[0]
+        return -1
     return -1
 
-
-def split_re(str, beg, end):
-    if re.search(beg, str) and re.search(end, str):
-        str = re.sub(r'([\s\S]*)' + beg, '', str)
-        str = re.sub(end + r'([\s\S]*)', '', str)
-        return str
-    else:
-        return -1;
-
-def get_content(self, mode):
-    '''
-    获取内容
-    :return:
-    '''
-    html = get_html(self.url, True)
-    if html <> -1:
-        if self.reg:
-            content = split_re(html, self.beg, self.end)
-        else:
-            content = split(html, self.beg, self.end)
-        if content <> -1:
-            return self.beg + content + self.end
-        else:
-            print "获取内容失败"
-            sys.exit(0)
-    else:
-        sys.exit(0)
-
-def test_content(self):
-    html = get_html(self.url, True)
-    if html <> -1:
-        if self.reg:
-            content = split_re(html, self.beg, self.end)
-        else:
-            content = split(html, self.beg, self.end)
-        if content <> -1:
-            return self.beg + content + self.end
-        else:
-            print "获取正文内容失败"
-    else:
-        pass
-
 class RssSpider():
-    def __init__(self, myrss, xmlpath):
+    def __init__(self, myrss, xmlpath, charset='utf-8'):
         self.url = myrss.link
         self.myrss = myrss
         self.xmlpath = xmlpath
-        if os.path.isfile(self.xmlpath):
-            os.remove(self.xmlpath)
+        self.lists = []
+        self.contents = []
+        self.charset=charset
+        if os.path.isfile(self.xmlpath): os.remove(self.xmlpath)
 
-    def SaveRssFile(self):
+    def save_rss_file(self):
         finallxml = self.myrss.to_xml(encoding='utf-8')
         file = open(self.xmlpath, 'w')
         file.writelines(finallxml)
         file.close()
 
-    def get_content(self, beg, end, reg):
-        self.content=[]
-        for item in self.list:
-            # print len(item)
-            print item[0]+'\n', item[1]+'\n'
-            html = get_html(item[0], False)
-            if html <> -1:
-                if reg:
-                    content = split_re(html, beg, end)
-                else:
-                    content = split(html, beg, end)
+    def get_list(self, reg, remove='', replaces=[], flag=re.S, min=False):
+        '''
+        获取文章列表
+        :param reg: 正则表达式
+        :param min: 是否压缩源码
+        :return: 文章列表
+        '''
+        pageCode = get_html(self.url, min)
+        if self.charset <> 'utf-8': pageCode.decode(self.charset).encode('utf-8')
+        if len(remove) > 0: pageCode=pageCode.replace(remove, '')
+        for replace in replaces:
+            if replace['reg']:
+                if re.search(replace['old'], pageCode):
+                    pageCode = re.sub(replace['old'], replace['new'], pageCode)
+            else:
+                pageCode=pageCode.replace(replace['old'], replace['new'])
+        pattern = re.compile(reg, flag)
+        self.lists = re.findall(pattern, pageCode)
+        return self.lists
+
+    def get_content(self, beg, end, reg=False):
+        '''
+        获取文章正文
+        :param beg:正文开始
+        :param end:正文结束
+        :param reg:是否采用正则表达式
+        :return: 文章正文列表
+        '''
+        for item in self.lists:
+            if (platform.system() == 'Windows'): print item[0]+'\n', item[1].decode('utf-8')+'\n'
+            else: print item[0] + '\n', item[1] + '\n'
+            pageCode = get_html(item[0], False)
+            if pageCode <> -1:
+                content = split(pageCode, beg, end, reg)
                 if content <> -1:
                     rss = PyRSS2Gen.RSSItem(
                         title='<![CDATA[' + item[1] + ']]>',
@@ -155,15 +138,9 @@ class RssSpider():
                     )
                     self.myrss.items.append(rss)
                 else:
-                    print "获取内容失败"
+                    print "获取内容失败 ", item[0]
                     sys.exit(0)
             else:
+                print "获取内容失败 ", item[0]
                 sys.exit(0)
-        for a in self.content:
-            print a[0]+'\n', a[1]+'\n', a[2]+'\n',
-
-
-    def get_list(self, reg):
-        pageCode = get_html(self.url, False)
-        pattern = re.compile(reg,re.S)
-        self.list = re.findall(pattern, pageCode)
+        return self.myrss.items

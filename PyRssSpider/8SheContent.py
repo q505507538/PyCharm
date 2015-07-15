@@ -18,8 +18,8 @@ myrss = PyRSS2Gen.RSS2(
 def main():
     rssSpider = RssSpider(myrss, '8She.xml')
     rssSpider.get_list(r'<header>.*?<i></i></a><h2><a href="(.*?)" title=".*?">(.*?)</a></h2></header>')
-    rssSpider.get_content('<article class="article-content">', '</article>', False)
-    rssSpider.SaveRssFile()
+    rssSpider.get_content('<article class="article-content">', '</article>')
+    rssSpider.save_rss_file()
 
 if __name__ == '__main__':
     main()
