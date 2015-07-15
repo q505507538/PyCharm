@@ -16,16 +16,17 @@ myrss = PyRSS2Gen.RSS2(
 )
 
 def main():
-    repl1 = {'old': '</a>P<br>', 'new': 'P</a><br>', 'reg': False, 'flags': ''}
+    repl0 = {'old': '<img src="extremesex/memder/ng/logo31.gif" width="47" height="25" border="0" alt="New!">', 'new': '', 'reg': False, 'flags': 0}
+    repl1 = {'old': '</a>P<br>', 'new': 'P</a><br>', 'reg': False, 'flags': 0}
     repl2 = {'old': '<BR>\s+</A>', 'new': '</a><br>', 'reg': True, 'flags': re.S|re.I}
-    repl3 = {'old': '<A target="_blank" href="extremesex/memder/photo/messi1/index.html"></a><br>', 'new': '', 'reg': False, 'flags': ''}
-    replaces = [repl1,repl2,repl3]
+    repl3 = {'old': '<A target="_blank" href="extremesex/memder/photo/messi1/index.html"></a><br>', 'new': '', 'reg': False, 'flags': 0}
+    replaces = [repl0,repl1,repl2,repl3]
     rssSpider = RssSpider(myrss, 'elm-world.xml', charset='CP932')
-    items=rssSpider.get_list(r'<a.*?href="(.*?)".*?>(.*?)</a>', remove='<img src="extremesex/memder/ng/logo31.gif" width="47" height="25" border="0" alt="New!">', replaces=replaces, flag=re.S|re.I)
+    items=rssSpider.get_list(r'<a.*?href="(.*?)".*?>(.*?)</a>', replaces=replaces, flag=re.S|re.I)
     # print items
     for item in items:
         # print len(item)
-        print item[0].decode('CP932')+'\n',item[1].decode('CP932')+'\n'
+        print item[0]+'\n', item[1].decode('CP932')+'\n'
 
 if __name__ == '__main__':
     main()

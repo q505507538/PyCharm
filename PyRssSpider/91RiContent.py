@@ -1,7 +1,6 @@
 # -*- coding: UTF-8 -*-
-import urllib2
+import re
 import PyRSS2Gen
-import PyRssSpider
 from PyRssSpider import RssSpider
 import datetime
 
@@ -17,7 +16,7 @@ myrss = PyRSS2Gen.RSS2(
 
 def main():
     rssSpider = RssSpider(myrss, '91ri.xml')
-    rssSpider.get_list(r'<div class="right-col">\s+<h1><a href="(.*?)" data-no-turbolink="true" target="_blank" title="(.*?)">')
+    rssSpider.get_list(r'<div class="right-col">\s+<h1><a href="(.*?)" data-no-turbolink="true" target="_blank" title="(.*?)">', flag=re.S)
     rssSpider.get_content('<article class="single-post">', '</article>')
     rssSpider.save_rss_file()
 
