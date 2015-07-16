@@ -33,22 +33,18 @@ def get_host(url):
         return res
     else:
         print "获取host" + url + "失败"
-        return -1
+        sys.exit(0)
 
 
-def get_html(url, min):
+def get_html(url, host='', min=False):
     '''
     获取网页源代码函数
     :param url: 待获取的url地址
     :param min: 是否压缩源代码
     :return:
     '''
-    if get_host(url) <> -1:
-        host = get_host(url)
-    else:
-        return -1
-    if (url[0:5] == 'https') and (
-        platform.system() == 'Windows'): ssl._create_default_https_context = ssl._create_unverified_context
+    if host == '': host = get_host(url)
+    if (url[0:5] == 'https') and (platform.system() == 'Windows'): ssl._create_default_https_context = ssl._create_unverified_context
     random_header = random.choice(my_headers)
     request = urllib2.Request(url)
     request.add_header("User-Agent", random_header)
@@ -56,8 +52,7 @@ def get_html(url, min):
     request.add_header("Referer", "http://baidu.com/")
     request.add_header("GET", url)
     content = urllib2.urlopen(request).read()
-    if min: content = re.sub(r'>\s*<', '><',
-                             content.replace('\t', '').replace('\r\n', '').replace('\n', '').replace('\r', ''))
+    if min: content = re.sub(r'>\s+<', '><', content.replace('\t', '').replace('\r\n', '').replace('\n', '').replace('\r', ''))
     return content
 
 
@@ -104,6 +99,7 @@ def replace(old, new, string, reg=False, flags=0):
 class RssSpider():
     def __init__(self, myrss, xmlpath, charset='utf-8'):
         self.url = myrss.link
+        self.host = get_host(self.url)
         self.myrss = myrss
         self.xmlpath = xmlpath
         self.lists = []
@@ -117,6 +113,17 @@ class RssSpider():
         file.writelines(finallxml)
         file.close()
 
+    def _relative2absolute(self, url):
+        if url[0:4] == 'http':
+            return url
+        elif url[0:5] == 'https':
+            return url
+        else:
+            if self.url[0:5] == 'https':
+                return 'https://' + self.host + '/' + url
+            else:
+                return 'http://' + self.host + '/' + url
+
     def get_list(self, reg, replaces=[], flag=0, min=False):
         '''
         获取文章列表
@@ -124,7 +131,7 @@ class RssSpider():
         :param min: 是否压缩源码
         :return: 文章列表
         '''
-        pageCode = get_html(self.url, min)
+        pageCode = get_html(self.url, min=False)
         if self.charset <> 'utf-8': pageCode.decode(self.charset).encode('utf-8')
         for repl in replaces: pageCode = replace(repl['old'], repl['new'], pageCode, repl['reg'], repl['flags'])
         pattern = re.compile(reg, flag)
@@ -139,27 +146,39 @@ class RssSpider():
         :param reg:是否采用正则表达式
         :return: 文章正文列表
         '''
-        for item in self.lists:
-            if (platform.system() == 'Windows'):
-                print item[0] + '\n', item[1].decode('utf-8') + '\n'
-            else:
-                print item[0] + '\n', item[1] + '\n'
-            pageCode = get_html(item[0], False)
-            if pageCode <> -1:
-                content = split(pageCode, beg, end, reg)
-                if content <> -1:
-                    rss = PyRSS2Gen.RSSItem(
-                        title='<![CDATA[' + item[1] + ']]>',
-                        link=item[0],
-                        comments=item[0] + "#comments",
-                        pubDate=datetime.datetime.now(),
-                        description=beg + content + end
-                    )
-                    self.myrss.items.append(rss)
+        if beg == '' and end == '':
+            for item in self.lists:
+                print self._relative2absolute(item[0]) + '\n', item[1].decode(self.charset) + '\n'
+                rss = PyRSS2Gen.RSSItem(
+                    title='<![CDATA[' + item[1].decode(self.charset) + ']]>',
+                    link=self._relative2absolute(item[0]),
+                    comments=self._relative2absolute(item[0]),
+                    pubDate=datetime.datetime.now(),
+                    description=item[1].decode(self.charset)
+                )
+                self.myrss.items.append(rss)
+        else:
+            for item in self.lists:
+                if (platform.system() == 'Windows'):
+                    print item[0] + '\n', item[1].decode(self.charset) + '\n'
+                else:
+                    print item[0] + '\n', item[1] + '\n'
+                pageCode = get_html(item[0], min=False)
+                if pageCode <> -1:
+                    content = split(pageCode, beg, end, reg)
+                    if content <> -1:
+                        rss = PyRSS2Gen.RSSItem(
+                            title='<![CDATA[' + item[1] + ']]>',
+                            link=item[0],
+                            comments=item[0] + "#comments",
+                            pubDate=datetime.datetime.now(),
+                            description=beg + content + end
+                        )
+                        self.myrss.items.append(rss)
+                    else:
+                        print "获取内容失败 ", item[0]
+                        sys.exit(0)
                 else:
                     print "获取内容失败 ", item[0]
                     sys.exit(0)
-            else:
-                print "获取内容失败 ", item[0]
-                sys.exit(0)
         return self.myrss.items

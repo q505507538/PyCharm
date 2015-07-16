@@ -6,7 +6,7 @@ from PyRssSpider import RssSpider
 import datetime
 
 myrss = PyRSS2Gen.RSS2(
-    title='elm-world',
+    title='エルマーWORLD',
     link='http://www.elm-world.com/newpage11.html',
     atom_link='http://117.28.237.21:29956/ording/resource/elm-world.xml',
     description=str(datetime.date.today()),
@@ -22,11 +22,13 @@ def main():
     repl3 = {'old': '<A target="_blank" href="extremesex/memder/photo/messi1/index.html"></a><br>', 'new': '', 'reg': False, 'flags': 0}
     replaces = [repl0,repl1,repl2,repl3]
     rssSpider = RssSpider(myrss, 'elm-world.xml', charset='CP932')
-    items=rssSpider.get_list(r'<a.*?href="(.*?)".*?>(.*?)</a>', replaces=replaces, flag=re.S|re.I)
+    rssSpider.get_list(r'<a.*?href="(.*?)".*?>(.*?)</a>', replaces=replaces, flag=re.S|re.I)
+    rssSpider.get_content('', '')
+    rssSpider.save_rss_file()
     # print items
-    for item in items:
+    # for item in items:
         # print len(item)
-        print item[0]+'\n', item[1].decode('CP932')+'\n'
+        # print item[0]+'\n', item[1].decode('CP932')+'\n'
 
 if __name__ == '__main__':
     main()
