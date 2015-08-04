@@ -146,12 +146,12 @@ class RssSpider():
         :param reg:是否采用正则表达式
         :return: 文章正文列表
         '''
+        i = len(self.lists)
         if beg == '' and end == '':
-            i = len(self.lists)
             for item in self.lists[::-1]:
                 print self._relative2absolute(item[0]) + '\n', item[1].decode(self.charset) + '\n'
                 rss = PyRSS2Gen.RSSItem(
-                    title='<![CDATA[' + item[1].decode(self.charset) + ']]>',
+                    title=item[1].decode(self.charset),
                     link=self._relative2absolute(item[0]),
                     comments=self._relative2absolute(item[0]),
                     pubDate=datetime.datetime.now(),
@@ -161,7 +161,6 @@ class RssSpider():
                 self.myrss.items.append(rss)
                 i = i - 1
         else:
-            i = len(self.lists)
             for item in self.lists[::-1]:
                 if (platform.system() == 'Windows'):
                     print item[0] + '\n', item[1].decode(self.charset) + '\n'
@@ -172,7 +171,7 @@ class RssSpider():
                     content = split(pageCode, beg, end, reg)
                     if content <> -1:
                         rss = PyRSS2Gen.RSSItem(
-                            title='<![CDATA[' + item[1] + ']]>',
+                            title=item[1],
                             link=item[0],
                             comments=item[0] + "#comments",
                             pubDate=datetime.datetime.now(),
@@ -187,5 +186,5 @@ class RssSpider():
                 else:
                     print "获取内容失败 ", item[0]
                     sys.exit(0)
-        self.myrss.items = self.myrss.items[::-1]
+        self.myrss.items = self.myrss.items[::-1] # 将列表倒序排列
         return self.myrss.items
