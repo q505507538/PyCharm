@@ -154,7 +154,8 @@ class RssSpider():
                     link=self._relative2absolute(item[0]),
                     comments=self._relative2absolute(item[0]),
                     pubDate=datetime.datetime.now(),
-                    description=item[1].decode(self.charset)
+                    description=item[1].decode(self.charset),
+                    guid=self._relative2absolute(item[0])
                 )
                 self.myrss.items.append(rss)
         else:
@@ -172,7 +173,8 @@ class RssSpider():
                             link=item[0],
                             comments=item[0] + "#comments",
                             pubDate=datetime.datetime.now(),
-                            description=beg + content + end
+                            description=beg + content + end,
+                            guid=item[0]
                         )
                         self.myrss.items.append(rss)
                     else:
