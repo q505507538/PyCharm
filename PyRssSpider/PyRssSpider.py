@@ -147,7 +147,8 @@ class RssSpider():
         :return: 文章正文列表
         '''
         if beg == '' and end == '':
-            for item in self.lists:
+            i = len(self.lists)
+            for item in self.lists[::-1]:
                 print self._relative2absolute(item[0]) + '\n', item[1].decode(self.charset) + '\n'
                 rss = PyRSS2Gen.RSSItem(
                     title='<![CDATA[' + item[1].decode(self.charset) + ']]>',
@@ -155,11 +156,13 @@ class RssSpider():
                     comments=self._relative2absolute(item[0]),
                     pubDate=datetime.datetime.now(),
                     description=item[1].decode(self.charset),
-                    guid=self._relative2absolute(item[0])
+                    guid=self._relative2absolute(item[0]) + str(i)
                 )
                 self.myrss.items.append(rss)
+                i = i - 1
         else:
-            for item in self.lists:
+            i = len(self.lists)
+            for item in self.lists[::-1]:
                 if (platform.system() == 'Windows'):
                     print item[0] + '\n', item[1].decode(self.charset) + '\n'
                 else:
@@ -174,13 +177,15 @@ class RssSpider():
                             comments=item[0] + "#comments",
                             pubDate=datetime.datetime.now(),
                             description=beg + content + end,
-                            guid=item[0]
+                            guid=item[0] + str(i)
                         )
                         self.myrss.items.append(rss)
+                        i = i - 1
                     else:
                         print "获取内容失败 ", item[0]
                         sys.exit(0)
                 else:
                     print "获取内容失败 ", item[0]
                     sys.exit(0)
+        self.myrss.items = self.myrss.items[::-1]
         return self.myrss.items
