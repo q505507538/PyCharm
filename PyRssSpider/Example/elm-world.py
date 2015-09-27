@@ -1,15 +1,15 @@
 # -*- coding: UTF-8 -*-
 import urllib2
-import PyRSS2Gen
+import PyRssSpider.PyRSS2Gen
 import re
-from PyRssSpider import RssSpider
+from PyRssSpider.PyRssSpider import RssSpider
 import datetime
 
-myrss = PyRSS2Gen.RSS2(
+myrss = PyRssSpider.PyRSS2Gen.RSS2(
     title='エルマーWORLD',
     link='http://www.elm-world.com/newpage11.html',
     atom_link='http://117.28.237.21:29956/ording/resource/elm-world.xml',
-    description=str(datetime.date.today()),
+    description='エルマーWORLD',
     lastBuildDate=datetime.datetime.now(),
     language="zh-CN",
     items=[]

@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 import urllib2
 import PyRSS2Gen
-import re, random, datetime, sys, os, ssl, platform
+import re, random, datetime, sys, os, ssl, platform, sqlite3
 from bs4 import BeautifulSoup
 
 reload(sys)
@@ -97,7 +97,7 @@ def replace(old, new, string, reg=False, flags=0):
 
 
 class RssSpider():
-    def __init__(self, myrss, xmlpath, charset='utf-8'):
+    def __init__(self, myrss, xmlpath, db, charset='utf-8'):
         self.url = myrss.link
         self.host = get_host(self.url)
         self.myrss = myrss
@@ -105,7 +105,27 @@ class RssSpider():
         self.lists = []
         self.contents = []
         self.charset = charset
-        if os.path.isfile(self.xmlpath): os.remove(self.xmlpath)
+        # if os.path.isfile(self.xmlpath): os.remove(self.xmlpath)
+        if os.path.isfile(db): conn = sqlite3.connect(db)
+        else:
+            conn = sqlite3.connect(db)
+            conn.execute('''CREATE TABLE channel(id INT PRIMARY KEY     NOT NULL,
+                                                 title          TEXT    NOT NULL,
+                                                 link           TEXT    NOT NULL,
+                                                 description    TEXT    NOT NULL,
+                                                 atom_link      TEXT    NOT NULL);''')
+            conn.execute('''CREATE TABLE item(id INT PRIMARY KEY     NOT NULL,
+                                              title          TEXT    NOT NULL,
+                                              link           TEXT    NOT NULL,
+                                              description    TEXT    NOT NULL,
+                                              comments       TEXT    NOT NULL,
+                                              guid           TEXT    NOT NULL,
+                                              pubDate        TEXT    NOT NULL);''')
+            print  myrss.title, myrss.link, myrss.description
+            # conn.execute("INSERT INTO channel (id,title,link,description,atom_link) \
+            #               VALUES ('%d', '%s', '%s', '%s', '%s')" % \
+            #                      (1, myrss.title, myrss.link, myrss.description, myrss.atom_link))
+            # conn.commit()
 
     def save_rss_file(self):
         finallxml = self.myrss.to_xml(encoding='utf-8')
